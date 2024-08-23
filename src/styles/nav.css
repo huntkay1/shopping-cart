@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.nav-button-container {
+    display: flex;
+}
+
+.cart-icon {
+    width: 25px;
+  }
