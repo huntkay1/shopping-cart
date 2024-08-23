@@ -1,0 +1,31 @@
+section {
+    display: grid;
+    grid-template-columns: 4fr auto 2fr;
+    height: 800px;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-one {
+    background: url(../assets/hero-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    grid-column: 1 / 2;
+    min-width: 50vw;
+}
+
+.hero-two {
+    background-image: url(../assets/hero-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 2 / 3;
+    min-width: calc(48vw - 25rem);
+}
+
+.hero-cta {
+    height: auto;
+    background-color: green;
+    grid-column: 3 / -1;
+    min-width: 50vw;
+}
