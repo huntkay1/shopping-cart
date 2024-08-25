@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --white-color: #CDD3D5;
+}
+
 section {
     display: grid;
     grid-template-columns: 4fr auto 2fr;
@@ -25,7 +32,37 @@ section {
 
 .hero-cta {
     height: auto;
-    background-color: green;
+    background-color: #36453B;
     grid-column: 3 / -1;
-    min-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 40px;
+    color: var(--white-color);
 }
+
+.hero-cta h2 {
+    font-size: 5vh;
+    margin: 0;
+    width: 16vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.hero-cta p {
+    line-height: 2;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.hero-cta button {
+    height: 4vh;
+    background-color: var(--white-color);
+    border: none;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #212222;
+}
+
