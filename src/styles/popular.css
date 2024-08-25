@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.popular {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 18vw;
+    height: 30vh;
+    gap: 8vw;
+    color: #212222;
+}
+
+.popular-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.popular-1 {
+    background-image: url('../assets/popular-1.png');
+    width: 220px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 100%;
+
+}
+
+.container-1 {
+    background-color: #515751;
+    border-radius: 100px 100px 10px 10px;
+    height: 250px;
+}
+
+.popular-2 {
+    background-image: url('../assets/popular-2.png');
+    width: 250px;
+    height: 225px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 60%;
+}
+
+.container-2 {
+    background-color: #C2C1A5;
+    border-radius: 120px;
+    width: 250px;
+    height: 250px;
+}
+
+.popular-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.popular-cta h2 {
+    font-size: 5vh;
+    margin: 0;
+    font-family: "DM Serif Text", serif;
+}
+
+.popular-cta p {
+    margin: 0;
+    font-family: "Poppins", sans-seif;
+}
+
+.popular-cta button{
+    max-width: 15vw;
+    margin-top: 10px;
+    background-color: #E7B5AC;
+    border: none;
+    height: 4vh;
+    border-radius: 10px;
+    font-family: "Poppins", sans-seif;
+    font-weight: 500;
+}
