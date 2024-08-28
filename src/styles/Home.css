@@ -29,7 +29,7 @@
 }
 
 .hero-cta {
-    background-color: #36453B;
+    background-color: #212222;
     grid-column: 3 / -1;
     display: flex;
     flex-direction: column;
@@ -89,8 +89,8 @@
 }
 
 .container-1 {
-    background-color: #515751;
-    border-radius: 100px 100px 10px 10px;
+    background-color: #36453B;
+    border-radius: 120px 120px 10px 10px;
     height: 250px;
 }
 
@@ -129,4 +129,43 @@
     height: 4vh;
     border-radius: 10px;
     font-weight: 500;
+}
+
+
+/* SIGNUP */
+.signup-section {
+    height: 45vh;
+    background-color: #212222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18vw;
+}
+
+.signup-img {
+    height: 42vh;
+    width: 28vw;
+    align-self: flex-end;
+    background-image: url(../assets/hero-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 100%;
+    border-radius: 155px 155px 0 0;
+}
+
+.signup-section h2 {
+    color: var(--white-color);
+    font-size: 5vh;
+    margin-bottom: 3vh;
+}
+
+.signup-section input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--white-color);
+    color: var(--white-color);
+    height: 5vh;
+    width: 90%;
+    padding-left: 5px;
+    font-size: 16px;
 }
