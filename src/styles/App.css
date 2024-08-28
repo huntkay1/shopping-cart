@@ -17,3 +17,7 @@ p, button, li, input {
     margin: 0;
 }
 
+h2 {
+    font-size: 5vh;
+}
+

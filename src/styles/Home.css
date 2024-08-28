@@ -39,7 +39,6 @@
 }
 
 .hero-cta h2 {
-    font-size: 5vh;
     margin-bottom: 2vh;
     width: 12vw;
     font-weight: 700;
@@ -117,10 +116,6 @@
     gap: 12px;
 }
 
-.popular-cta h2 {
-    font-size: 5vh;
-}
-
 .popular-cta button{
     max-width: 15vw;
     margin-top: 10px;
@@ -134,17 +129,18 @@
 
 /* SIGNUP */
 .signup-section {
-    height: 45vh;
+    height: 30vh;
     background-color: #212222;
     display: flex;
-    justify-content: space-between;
+    gap: 5vw;
+    justify-content: center;
     align-items: center;
-    padding: 0 18vw;
+    padding: 0 20px;
 }
 
 .signup-img {
-    height: 42vh;
-    width: 28vw;
+    height: 95%;
+    width: 230px;
     align-self: flex-end;
     background-image: url(../assets/hero-2.jpg);
     background-repeat: no-repeat;
@@ -155,17 +151,40 @@
 
 .signup-section h2 {
     color: var(--white-color);
-    font-size: 5vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
+    font-size: 3vh;
+    margin-bottom: 12px;
+}
+
+.input-container {
+    display: flex;
 }
 
 .signup-section input {
     background-color: transparent;
-    border: none;
-    border-bottom: 1px solid var(--white-color);
+    border: 0.75px solid lightgray;
+    border-radius: 5px 0 0 5px;
     color: var(--white-color);
     height: 5vh;
-    width: 90%;
-    padding-left: 5px;
+    width: 400px;
+    padding-left: 12px;
+    padding-right: -105px;
     font-size: 16px;
 }
+
+.signup-section button{
+    background-color: var(--white-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 0 5px 5px 0;
+}
+
+
+/* FOOTER */
+footer {
+    height: 40vh;
+    background-color: var(--white-color);
+}
+
