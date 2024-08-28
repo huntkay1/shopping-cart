@@ -1,17 +1,24 @@
 import shoppingCart from '../assets/cart-icon.svg'
 import '../styles/nav.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
 
     return (
-        <nav>
-            <div className='nav-button-container'>
-                <button>Shop</button>
-                <button>About</button>
-            </div>
+        <section className='navbar'>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to='shop'>Shop</Link>
+                    </li>
+                    <li>
+                        <Link to='about'>About</Link>
+                    </li>
+                </ul> 
+            </nav>
             <h1>Leafy Greens</h1>
             <img src={shoppingCart} className='cart-icon'></img>
-        </nav>
+        </section>
     )
 }
 

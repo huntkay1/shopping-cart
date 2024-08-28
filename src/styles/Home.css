@@ -2,7 +2,8 @@
     --white-color: #F5F9E9;
 }
 
-section {
+/* HERO SECTION */
+.hero {
     display: grid;
     grid-template-columns: 4fr auto 2fr;
     height: 87vh;
@@ -60,7 +61,7 @@ section {
     color: #212222;
 }
 
-
+/* POPULAR SECTION */
 .popular {
     display: flex;
     justify-content: space-between;
