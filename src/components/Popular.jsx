@@ -1,4 +1,4 @@
-import '../styles/popular.css'
+import '../styles/Home.css'
 
 function Popular() {
     return (

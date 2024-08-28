@@ -1,4 +1,4 @@
-import '../styles/hero.css'
+import '../styles/Home.css'
 
 function Hero() {
     return (
@@ -8,7 +8,7 @@ function Hero() {
             <div className='hero-cta'>
                 <h2>Spring Into Fall</h2>
                 <p>Lorem ipsum sit amet, consectetur molestiae possimus odit rerum sapiente.</p>
-                <button>Shop Now</button>
+                <button>Shop Fall Collection</button>
             </div>
         </section>
     )
