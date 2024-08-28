@@ -11,7 +11,7 @@ const routes = [
     element: <App />
   },
   {
-    path: "profile/:name",
+    path: "/shop",
     element: <Shop />,
   },
 ];
