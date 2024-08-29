@@ -8,11 +8,7 @@
     padding: 15px 6vw;
 }
 
-ul {
-    list-style-type: none;
-}
-
-li {
+.navbar li {
     display: inline-block;
 }
 

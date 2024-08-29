@@ -29,7 +29,7 @@
 }
 
 .hero-cta {
-    background-color: #212222;
+    background-color: #081D17;
     grid-column: 3 / -1;
     display: flex;
     flex-direction: column;
@@ -67,14 +67,14 @@
     align-items: center;
     padding: 60px 18vw;
     height: 40vh;
-    gap: 8vw;
+    gap: 7vw;
     color: #212222;
 }
 
 .popular-images {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 2vw;
 }
 
 .popular-1 {
@@ -88,7 +88,7 @@
 }
 
 .container-1 {
-    background-color: #36453B;
+    background-color: #081D17;
     border-radius: 120px 120px 10px 10px;
     height: 250px;
 }
@@ -136,6 +136,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
+    border-bottom: 0.5px solid #545454;
 }
 
 .signup-img {
@@ -147,6 +148,7 @@
     background-size: cover;
     background-position: 80% 100%;
     border-radius: 155px 155px 0 0;
+    opacity: 0.9;
 }
 
 .signup-section h2 {
@@ -162,7 +164,7 @@
 
 .signup-section input {
     background-color: transparent;
-    border: 0.75px solid lightgray;
+    border: 0.75px solid #545454;
     border-radius: 5px 0 0 5px;
     color: var(--white-color);
     height: 5vh;
@@ -170,6 +172,11 @@
     padding-left: 12px;
     padding-right: -105px;
     font-size: 16px;
+}
+
+.signup-section input:focus {
+    outline: none;
+    border-color: #E7B5AC;
 }
 
 .signup-section button{
@@ -185,6 +192,6 @@
 /* FOOTER */
 footer {
     height: 40vh;
-    background-color: var(--white-color);
+    background-color: #212222;
 }
 

@@ -7,17 +7,21 @@ body {
     background-color: #F5F9E9;
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family: "DM Serif Text", serif;
     margin: 0;
 }
 
-p, button, li, input {
+p, button, li, input, h3 {
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
 
 h2 {
     font-size: 5vh;
+}
+
+ul {
+    list-style-type: none;
 }
 

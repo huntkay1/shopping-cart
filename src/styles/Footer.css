@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    justify-content: center;
+    color: #ADADAD;
+    padding: 4vh 470px 3vh 27vw;
+    height: 100%;
+    gap: 10vw;
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    font-size: 12px;
+    margin-bottom: 0.8vh;
+    font-weight: 300;
+}
+
+footer h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
