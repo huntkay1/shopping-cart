@@ -2,7 +2,7 @@ footer {
     display: flex;
     justify-content: center;
     color: #ADADAD;
-    padding: 4vh 470px 3vh 27vw;
+    padding: 4vh 0 3vh 0;
     height: 100%;
     gap: 10vw;
 }
@@ -23,4 +23,6 @@ footer h3 {
     font-weight: 600;
     margin-bottom: 8px;
 }
+
+/* sk-NIzP66d10aaa4c2746664 */
 

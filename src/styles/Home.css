@@ -184,6 +184,7 @@
     border: none;
     display: flex;
     align-items: center;
+    gap: 3px;
     padding: 0 30px;
     border-radius: 0 5px 5px 0;
 }
