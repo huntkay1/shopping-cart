@@ -26,8 +26,18 @@
     row-gap: 20px;
     column-gap: 10px;
     overflow: scroll;
-    margin-right: 250px;
+    margin-right: 8vw;
     margin-bottom: 50px;
     margin-top: 10px;
-    margin-left: 50px;
+}
+
+.shop-nav {
+    margin-left: 4vw;
+    margin-right: 3vw;
+    padding-top: 3vh;
+    width: 200px;
+}
+
+.shop-nav li {
+    margin-bottom: 0.8vh;
 }

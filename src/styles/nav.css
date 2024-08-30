@@ -10,6 +10,7 @@
 
 .navbar li {
     display: inline-block;
+    font-size: 14px;
 }
 
 .navbar a {
@@ -17,8 +18,12 @@
     text-decoration: none;
 }
 
-.navbar li:first-child {
+.navbar li {
     margin-right: 2.5vw;
+}
+
+.navbar li:last-child {
+    margin-right: 0;
 }
 
 .navbar h1 {
