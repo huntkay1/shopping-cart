@@ -5,7 +5,12 @@
 
 .product-card {
     border: 1px solid #212222;
+    border-radius: 5px;
     width: 220px;
+}
+
+.product-card img { 
+    border-radius: 4px 4px 0 0;
 }
 
 .product-details {
@@ -29,6 +34,7 @@
     margin-right: 8vw;
     margin-bottom: 50px;
     margin-top: 10px;
+    height: 100vh;
 }
 
 .shop-nav {
