@@ -30,11 +30,9 @@
     grid-auto-rows: 350px;
     row-gap: 20px;
     column-gap: 10px;
-    overflow: scroll;
     margin-right: 8vw;
     margin-bottom: 50px;
     margin-top: 10px;
-    height: 100vh;
 }
 
 .shop-nav {
@@ -42,6 +40,9 @@
     margin-right: 3vw;
     padding-top: 3vh;
     width: 200px;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 .shop-nav li {
