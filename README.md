@@ -11,4 +11,6 @@ The next features that I will be adding are:
 - adding to shopping cart
 - creating a custom database (possibly a custom API)
 
+<b>Accessbile here: https://poetic-starlight-e42a0f.netlify.app/</b>
+
 
