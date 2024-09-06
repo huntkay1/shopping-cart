@@ -1,10 +1,11 @@
+import '../styles/Shop.css'
+
 function Card({plantData}) {
-    let url = plantData.product_img_url;
-    const myStyle = {
-        backgroundImage:
-            `url(${url})`,
+    const IMGUrl = plantData.product_img_url;
+    const productImageStyle = {
+        backgroundImage: `url(${IMGUrl})`,
         width: '100%',
-        height: '28vh',
+        height: '30vh',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         borderRadius: '4px 4px 0 0', 
@@ -14,11 +15,10 @@ function Card({plantData}) {
     return(
         
         <div className='product-card'>
-            <div style={myStyle}></div>
-            {/* <img src={plantData.product_img_url} width='100%'></img> */}
+            <div style={productImageStyle}></div>
             <div className='product-details'>
                 <h4>{plantData.product_name}</h4>
-                <p>$20.00</p>
+                <p>${plantData.product_price}</p>
             </div>
         </div>
 
