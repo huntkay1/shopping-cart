@@ -1,6 +1,5 @@
 import Navbar from './Navbar';
 import Footer from './Footer'
-import placeholder from '../assets/hero-3.jpg'
 import Card from './Card'
 import { useState, useEffect } from 'react'
 import '../styles/Shop.css'
@@ -14,7 +13,7 @@ function Shop() {
         useEffect(() => {
           const fetchData = async() => {
             try {
-                const response = await fetch(`https://perenual.com/api/species-list?key=sk-NIzP66d10aaa4c2746664&indoor=1&page=10`, {mode: 'cors'});
+                const response = await fetch(`http://localhost:3000/products`, {mode: 'cors'});
                 const data = await response.json();
                 setData(data);
             } catch (error) {
@@ -43,10 +42,9 @@ function Shop() {
                 </div>
                 <div className='card-container'>
                     {plantData && 
-                        plantData.data.map((entry, index) => 
+                        plantData.map((entry, index) => 
                         <Card 
                         plantData={entry}
-                        placeholderIMG={placeholder}
                         key={index}
                         />)  
                     }
