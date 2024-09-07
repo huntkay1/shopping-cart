@@ -25,3 +25,9 @@ ul {
     list-style-type: none;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.6vh;
+}
+

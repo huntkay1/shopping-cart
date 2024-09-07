@@ -54,7 +54,6 @@
 .hero-cta button {
     height: 4vh;
     background-color: var(--white-color);
-    border: none;
     border-radius: 10px;
     font-weight: 500;
     color: #212222;
@@ -120,7 +119,6 @@
     max-width: 15vw;
     margin-top: 10px;
     background-color: #E7B5AC;
-    border: none;
     height: 4vh;
     border-radius: 10px;
     font-weight: 500;
@@ -181,7 +179,6 @@
 
 .signup-section button{
     background-color: var(--white-color);
-    border: none;
     display: flex;
     align-items: center;
     gap: 3px;

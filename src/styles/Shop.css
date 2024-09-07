@@ -43,3 +43,12 @@
 .shop-nav li {
     margin-bottom: 0.8vh;
 }
+
+.shop-nav button {
+    color: #444444
+}
+
+button.active {
+    font-weight: 600;
+    color: #212222
+}
