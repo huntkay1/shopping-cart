@@ -10,9 +10,8 @@
 }
 
 .product-details {
-    padding-left: 1vw;
-    padding-top: 2vh;
     color: #212222;
+    padding: 2vh 0 2vh 1vw;
 }
 
 .product-details h4 {
