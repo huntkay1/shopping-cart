@@ -44,12 +44,9 @@ function Shop() {
             const result = plantData.filter((product) => filterType.includes(product.plant_type) );
             setFilteredData(result);
         };
-         
     }
 
-
-
-    return(
+    return (
         <>
             <Navbar />
             <section className='shop'>

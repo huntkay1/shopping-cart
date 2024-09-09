@@ -11,19 +11,16 @@
 .navbar li {
     display: inline-block;
     font-size: 14px;
-}
-
-.navbar a {
-    color: #212222;
-    text-decoration: none;
-}
-
-.navbar li {
     margin-right: 2.5vw;
 }
 
 .navbar li:last-child {
     margin-right: 0;
+}
+
+.navbar a {
+    color: #212222;
+    text-decoration: none;
 }
 
 .navbar h1 {
@@ -34,3 +31,6 @@
 .cart-icon {
     width: 25px;
 }
+
+
+

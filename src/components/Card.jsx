@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
 import '../styles/Shop.css'
+import { Link } from 'react-router-dom'
 
-function Card({plantData}) {
+function Card({ plantData }) {
+
     const IMGUrl = plantData.product_img_url;
     const productImageStyle = {
         backgroundImage: `url(${IMGUrl})`,
@@ -13,16 +16,15 @@ function Card({plantData}) {
     };
 
     return(
-        
-        <div className='product-card'>
-            <div style={productImageStyle}></div>
-            <div className='product-details'>
-                <h4>{plantData.product_name}</h4>
-                <p>${plantData.product_price}</p>
+        <Link to={'/details/' + plantData.product_id}>
+            <div className='product-card' >
+                <div style={productImageStyle}></div>
+                <div className='product-details'>
+                    <h4>{plantData.product_name}</h4>
+                    <p>${plantData.product_price}</p>
+                </div>
             </div>
-        </div>
-
-
+        </Link>
     )
 }
 
