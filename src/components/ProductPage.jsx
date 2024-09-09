@@ -1,6 +1,9 @@
 import { useParams } from 'react-router-dom'
 import { getProductData } from './productData';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import '../styles/ProductPage.css';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function ProductPage() {
     const { id }  = useParams();
@@ -14,16 +17,21 @@ function ProductPage() {
     }, [productData]);
     
     return (
-
-            <div className='product-page'>
-                {selectedProduct && 
-                    
-                    <h3>{selectedProduct.product_name}</h3>
-                }
-                
-            </div>
-        
-
+        <>
+            <Navbar />
+            {selectedProduct && 
+                <div className='product-page'>
+                    <img src={selectedProduct.product_img_url}></img>
+                    <div className='product-information'>
+                        <h2>{selectedProduct.product_name}</h2>
+                        <p className='price'>${selectedProduct.product_price}</p>
+                        <p className='description'>{selectedProduct.product_description}</p>
+                        <button className='pink-button'>Add to cart</button>
+                    </div>
+                </div>
+            }
+            <Footer />
+        </>  
     )
 }
 

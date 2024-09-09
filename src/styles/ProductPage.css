@@ -1,0 +1,34 @@
+.product-page {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.product-page img {
+    height: 70vh;
+    border-radius: 5px;
+}
+
+.product-information {
+    margin-top: 5vh;
+}
+
+.product-information .price {
+    font-size: 3vh;
+}
+
+.product-information .description {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.product-information button {
+    width: 11vw;
+}
+
+
+
