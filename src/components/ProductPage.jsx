@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import '../styles/ProductPage.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { useCart } from './Cart';
+import { useCart } from './CartContext';
 
 
 function ProductPage() {

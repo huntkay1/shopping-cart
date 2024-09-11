@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import App from './components/App'
 import Shop from './components/Shop'
 import ProductPage from './components/ProductPage'
-import { CartProvider } from './components/Cart'
+import { CartProvider } from './components/CartContext'
 import './index.css'
 
 const routes = [
