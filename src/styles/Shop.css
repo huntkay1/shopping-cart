@@ -6,7 +6,8 @@
 .product-card {
     border: 1.5px solid #212222;
     border-radius: 5px;
-    width: 250px;
+    width: 270px;
+    margin: auto;
 }
 
 .product-details {
@@ -21,14 +22,15 @@
 .card-container {
     display: grid;
     grid-column: 2 / -1;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     grid-auto-rows: 40vh;
     row-gap: 20px;
     column-gap: 10px;
-    margin-right: 10vw;
-    margin-left: 5vw;
     margin-bottom: 50px;
     margin-top: 5vh;
+    margin-right: 10vw;
+    justify-content: center;
+   
 }
 
 .shop-nav {
