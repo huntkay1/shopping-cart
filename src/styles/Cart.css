@@ -1,0 +1,20 @@
+.shopping-cart {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 8vw; 
+}
+
+.cart-header {
+    text-align: center;
+    font-size: 3vh;
+    font-weight: 500;
+    margin-bottom: 5vh;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+td {
+    text-align: center
+}

@@ -6,7 +6,8 @@
 .product-card {
     border: 1.5px solid #212222;
     border-radius: 5px;
-    width: 270px;
+    min-width: 270px;
+    max-width: 350px;
     margin: auto;
 }
 

@@ -15,12 +15,13 @@ function Navbar() {
                         <Link to='/shop'>Shop</Link>
                     </li>
                     <li>
-                        <Link to='about'>About</Link>
+                        <Link to='/about'>About</Link>
                     </li>
                 </ul> 
             </nav>
-            <h1>Leafy Greens</h1>
-            <img src={shoppingCart} className='cart-icon'></img>
+            <div className='logo'>  <h1>Leafy Greens</h1></div>
+            
+            <div className='cart'><Link to='/cart'><img src={shoppingCart} className='cart-icon'></img></Link></div>
         </section>
     )
 }

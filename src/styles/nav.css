@@ -4,27 +4,46 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 6vw;
+    justify-content: space-around;
+    padding-top: 2vh;
+}
+
+.navbar ul {
+    display: inline-block;
 }
 
 .navbar li {
-    display: inline-block;
     font-size: 14px;
-    margin-right: 2.5vw;
+    display: inline;
+    padding-right: 3vw;
 }
 
 .navbar li:last-child {
-    margin-right: 0;
+    padding-right: 0;
 }
 
 .navbar h1 {
     color: #36453B;
-    margin-left: -5vw;
+    text-align: center;
 }
 
 .cart-icon {
     width: 25px;
+}
+
+nav {
+    width: 100%;
+    text-align: center
+}
+
+.logo {
+    width: 100%;
+}
+
+.cart {
+    width: 100%;
+    display: grid;
+    text-align: center;
 }
 
 

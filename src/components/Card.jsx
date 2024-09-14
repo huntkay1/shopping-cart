@@ -12,7 +12,7 @@ function Card({ plantData }) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         borderRadius: '4px 4px 0 0', 
-        backgroundPosition: '100% 70%'
+        backgroundPosition: '100% 50%'
     };
 
     return(
