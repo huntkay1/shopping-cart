@@ -3,14 +3,13 @@ import { createContext, useState, useContext } from 'react';
 //creates the new context
 const CartContext = createContext();
 
-// Create sa Provider Component that is accessible to all children components (the components that are wrapped around by the CartProvider in main.jsx)
+//Provider Component that is accessible to all children components (the components that are wrapped around by the CartProvider in main.jsx)
 export function CartProvider({ children }) {
     const [cartContents, setCartContents] = useState([]);
 
     function addToCart(product) {
         setCartContents(prevCart => [...prevCart, product]);
     }
-    console.log(cartContents)
 
     return (
         <CartContext.Provider value={{ cartContents, addToCart }}>
