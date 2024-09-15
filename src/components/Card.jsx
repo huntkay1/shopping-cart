@@ -11,8 +11,9 @@ function Card({ plantData }) {
         height: '30vh',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        borderRadius: '4px 4px 0 0', 
-        backgroundPosition: '100% 50%'
+        borderRadius: '5px', 
+        backgroundPosition: '100% 50%',
+        boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
     };
 
     return(
