@@ -66,6 +66,8 @@
     align-self: flex-end;
     width: 28vw;
     margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart-total-section {
@@ -85,4 +87,11 @@
 
 .grand-total {
     font-size: 25px;
+}
+
+.checkout-totals .pink-button {
+    width: 100%;
+    height: 5vh;
+    align-self: flex-end;
+
 }

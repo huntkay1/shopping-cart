@@ -78,7 +78,7 @@ function Cart() {
                         <p className='grand-total'> ${cartGrandTotal}</p>
                     </div>
 
-                    <h4></h4>
+                    <button className='pink-button'>Checkout</button>
                 </div>
 
             </section>
