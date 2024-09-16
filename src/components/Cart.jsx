@@ -8,7 +8,7 @@ function Cart() {
     const cartWithQuantity = calculateQuantity();
 
     function calculateQuantity() {
-        const quantityMap = {};
+        const quantityMap = [];
         cartContents.forEach(item => {
             if (!quantityMap[item.product_id]) {
                 quantityMap[item.product_id] = {...item, quantity: 1};
@@ -18,6 +18,11 @@ function Cart() {
         })
 
         return quantityMap
+    }
+
+    function calculateTotal() {
+        const total = cartWithQuantity.reduce((total, item) => total + (item.product_price*item.quantity), 0)
+        return total.toFixed(2)
     }
 
 
@@ -36,10 +41,9 @@ function Cart() {
                         <h3>Total</h3>
                     </div>
 
-                    {Object.keys(cartWithQuantity).length > 0 ? (
+                    {cartWithQuantity.length > 0 ? (
                     <div className='cart-items'>
-                        {/* Convert the object to an array and map over it */}
-                        {Object.values(cartWithQuantity).map((item, index) => (
+                        {cartWithQuantity.map((item, index) => (
                             <div key={index} className='cart-item'>
                                 <div className='cart-item-title'>
                                     <img src={item.product_img_url} alt={item.product_name} className='cart-item-img' />
@@ -54,9 +58,10 @@ function Cart() {
                 ) : (
                     <p>Your cart is empty.</p>
                 )}
-
-
                 </section>
+                <div className='checkout-info'>
+                    <h4 className='cart-total'>{calculateTotal()}</h4>
+                </div>
 
             </section>
 
