@@ -11,6 +11,7 @@ export function CartProvider({ children }) {
         setCartContents(prevCart => [...prevCart, product]);
     }
 
+
     return (
         <CartContext.Provider value={{ cartContents, addToCart }}>
             {children}

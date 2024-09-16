@@ -6,6 +6,10 @@ import { useCart } from './CartContext'
 function Cart() {
     const { cartContents } = useCart();
     const cartWithQuantity = calculateQuantity();
+    const cartSubtotal = calculateTotal();
+    const cartTax = (cartSubtotal * 0.06).toFixed(2)
+    const cartGrandTotal = +cartSubtotal + +cartTax
+
 
     function calculateQuantity() {
         const quantityMap = [];
@@ -59,8 +63,22 @@ function Cart() {
                     <p>Your cart is empty.</p>
                 )}
                 </section>
-                <div className='checkout-info'>
-                    <h4 className='cart-total'>{calculateTotal()}</h4>
+
+                <div className='checkout-totals'>
+                    <div className='cart-total-section border'>
+                        <h4 className='cart-total-header'>Subtotal</h4>
+                        <p>${cartSubtotal}</p>
+                    </div>
+                    <div className='cart-total-section border'>
+                        <h4 className='cart-total-header'>Tax</h4>
+                        <p>${cartTax}</p>
+                    </div>
+                    <div className='cart-total-section'>
+                        <h4 className='cart-total-header'>Total</h4>
+                        <p className='grand-total'> ${cartGrandTotal}</p>
+                    </div>
+
+                    <h4></h4>
                 </div>
 
             </section>
