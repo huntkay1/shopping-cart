@@ -1,7 +1,16 @@
-.shopping-cart {
+.shopping-cart-page {
     display: flex;
     flex-direction: column;
     padding: 5vh 12vw; 
+}
+
+.shopping-cart {
+    min-height: 30vh;
+}
+
+.empty-cart {
+    text-align: center;
+    margin-top: 2vh;
 }
 
 .cart-header {

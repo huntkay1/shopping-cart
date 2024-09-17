@@ -19,11 +19,11 @@ function Cart() {
     return(
         <>
             <Navbar />
-            <section className='shopping-cart'>
+            <section className='shopping-cart-page'>
                 <h2 className='cart-header'>
                 Your Cart - {cartContents.length} {cartContents.length === 1 ? 'Item' : 'Items'}
                 </h2>
-                <section>
+                <section className='shopping-cart'>
                     <div className='table-header'>
                         <h3>Item</h3>
                         <h3>Price</h3>
@@ -48,7 +48,7 @@ function Cart() {
                         ))}
                     </div>
                 ) : (
-                    <p>Your cart is empty.</p>
+                    <p className='empty-cart'>Your cart is empty.</p>
                 )}
                 </section>
 
