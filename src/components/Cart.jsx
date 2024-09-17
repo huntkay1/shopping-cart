@@ -5,24 +5,11 @@ import { useCart } from './CartContext'
 import removeIcon from '../assets/trash.svg'
 
 function Cart() {
-    const { cartContents } = useCart();
-    const cartWithQuantity = calculateQuantity();
+    const { cartContents, getCartWithQuantities, removeItemFromCart } = useCart();
+    const cartWithQuantity = getCartWithQuantities();
     const cartSubtotal = calculateTotal();
     const cartTax = (cartSubtotal * 0.06).toFixed(2)
     const cartGrandTotal = (+cartSubtotal + +cartTax).toFixed(2)
-
-    function calculateQuantity() {
-        const quantityMap = [];
-        cartContents.forEach(item => {
-            if (!quantityMap[item.product_id]) {
-                quantityMap[item.product_id] = {...item, quantity: 1};
-            } else {
-                quantityMap[item.product_id].quantity++;
-            }
-        })
-
-        return quantityMap
-    }
 
     function calculateTotal() {
         const total = cartWithQuantity.reduce((total, item) => total + (item.product_price*item.quantity), 0)
@@ -55,7 +42,7 @@ function Cart() {
                                 <p className='cart-item-price'> ${item.product_price}</p>
                                 <p className='cart-item-quantity'>{item.quantity}</p>
                                 <p className='cart-item-total'>${(item.product_price * item.quantity).toFixed(2)}</p>
-                                <button className='remove-icon'><img src={removeIcon} width='22px'></img></button>
+                                <button className='remove-icon' onClick={()=>removeItemFromCart(item)}><img src={removeIcon} width='22px'></img></button>
                                 
                             </div>
                         ))}

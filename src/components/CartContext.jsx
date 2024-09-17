@@ -11,9 +11,27 @@ export function CartProvider({ children }) {
         setCartContents(prevCart => [...prevCart, product]);
     }
 
+    function getCartWithQuantities() {
+        const quantityMap = [];
+        cartContents.forEach(item => {
+            if (!quantityMap[item.product_id]) {
+                quantityMap[item.product_id] = {...item, quantity: 1};
+            } else {
+                quantityMap[item.product_id].quantity++;
+            }
+        })
+
+        return quantityMap
+    }
+
+    function removeItemFromCart(selectedProduct) {
+        const updatedCart = cartContents.filter(item => item.product_id != selectedProduct.product_id)
+        setCartContents(updatedCart)
+    }
+
 
     return (
-        <CartContext.Provider value={{ cartContents, addToCart }}>
+        <CartContext.Provider value={{ cartContents, addToCart, getCartWithQuantities, removeItemFromCart }}>
             {children}
         </CartContext.Provider>
     );
