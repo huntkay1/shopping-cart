@@ -2,6 +2,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import '../styles/Cart.css'
 import { useCart } from './CartContext'
+import removeIcon from '../assets/trash.svg'
 
 function Cart() {
     const { cartContents } = useCart();
@@ -9,7 +10,6 @@ function Cart() {
     const cartSubtotal = calculateTotal();
     const cartTax = (cartSubtotal * 0.06).toFixed(2)
     const cartGrandTotal = (+cartSubtotal + +cartTax).toFixed(2)
-
 
     function calculateQuantity() {
         const quantityMap = [];
@@ -28,7 +28,6 @@ function Cart() {
         const total = cartWithQuantity.reduce((total, item) => total + (item.product_price*item.quantity), 0)
         return total.toFixed(2)
     }
-
 
     return(
         <>
@@ -56,6 +55,8 @@ function Cart() {
                                 <p className='cart-item-price'> ${item.product_price}</p>
                                 <p className='cart-item-quantity'>{item.quantity}</p>
                                 <p className='cart-item-total'>${(item.product_price * item.quantity).toFixed(2)}</p>
+                                <button className='remove-icon'><img src={removeIcon} width='22px'></img></button>
+                                
                             </div>
                         ))}
                     </div>
