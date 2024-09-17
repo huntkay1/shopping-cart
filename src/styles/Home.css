@@ -29,7 +29,7 @@
 }
 
 .hero-cta {
-    background-color: #081D17;
+    background-color: #213E30;
     grid-column: 3 / -1;
     display: flex;
     flex-direction: column;
@@ -113,15 +113,6 @@
     flex-direction: column;
     justify-content: center;
     gap: 12px;
-}
-
-.pink-button {
-    max-width: 15vw;
-    margin-top: 10px;
-    background-color: #E7B5AC;
-    height: 4vh;
-    border-radius: 10px;
-    font-weight: 500;
 }
 
 

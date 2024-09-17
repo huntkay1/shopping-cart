@@ -37,3 +37,12 @@ a {
     color: #212222;
 }
 
+.pink-button {
+    max-width: 15vw;
+    margin-top: 10px;
+    background-color: #E7B5AC;
+    height: 4vh;
+    border-radius: 10px;
+    font-weight: 500;
+}
+

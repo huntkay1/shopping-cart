@@ -8,7 +8,7 @@ function Cart() {
     const cartWithQuantity = calculateQuantity();
     const cartSubtotal = calculateTotal();
     const cartTax = (cartSubtotal * 0.06).toFixed(2)
-    const cartGrandTotal = +cartSubtotal + +cartTax
+    const cartGrandTotal = (+cartSubtotal + +cartTax).toFixed(2)
 
 
     function calculateQuantity() {
