@@ -1,8 +1,11 @@
 import shoppingCart from '../assets/cart-icon.svg'
 import '../styles/nav.css'
 import { Link } from 'react-router-dom'
+import { useCart } from './CartContext'
 
 function Navbar() {
+
+    const { cartQuantity } = useCart();
 
     return (
         <section className='navbar'>
@@ -21,7 +24,7 @@ function Navbar() {
             </nav>
             <div className='logo'>  <h1>Leafy Greens</h1></div>
             
-            <div className='cart'><Link to='/cart'><img src={shoppingCart} className='cart-icon'></img><span id='cart-badge'>1</span></Link></div>
+            <div className='cart'><Link to='/cart'><img src={shoppingCart} className='cart-icon'></img><span id='cart-badge'>{cartQuantity}</span></Link></div>
         </section>
     )
 }
