@@ -72,6 +72,23 @@
     font-size: 16px;
 }
 
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+}
+
+.cart-item-quantity p {
+    padding: 1vw;
+}
+
+.quantity-button {
+    background-color: #212222;
+    color: var(--white-color);
+    border-radius: 60px;
+    padding: 0 7px;
+}
+
 .checkout-totals {
     align-self: flex-end;
     width: 28vw;

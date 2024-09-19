@@ -8,20 +8,23 @@ export function CartProvider({ children }) {
     const [cartContents, setCartContents] = useState([]);
 
     function addToCart(product) {
-        setCartContents(prevCart => [...prevCart, product]);
-    }
-
-    function getCartWithQuantities() {
-        const quantityMap = [];
-        cartContents.forEach(item => {
-            if (!quantityMap[item.product_id]) {
-                quantityMap[item.product_id] = {...item, quantity: 1};
+        
+        setCartContents(prevCart => {
+            const productExists = prevCart.find(item => item.product_id === product.product_id);
+    
+            if (productExists) {
+                // Increase quantity if product already exists
+                return prevCart.map(item =>
+                    item.product_id === product.product_id
+                        ? { ...item, quantity: item.quantity + 1 }
+                        : item
+                );
             } else {
-                quantityMap[item.product_id].quantity++;
+                // Add new product with quantity 1
+                return [...prevCart, { ...product, quantity: 1 }];
             }
-        })
-
-        return quantityMap
+        });
+        
     }
 
     function removeItemFromCart(selectedProduct) {
@@ -29,9 +32,13 @@ export function CartProvider({ children }) {
         setCartContents(updatedCart)
     }
 
+    function changeQuantity(selectedProduct, increment) {
+        console.log(selectedProduct, increment)
+    }
+
 
     return (
-        <CartContext.Provider value={{ cartContents, addToCart, getCartWithQuantities, removeItemFromCart }}>
+        <CartContext.Provider value={{ cartContents, addToCart,  removeItemFromCart, changeQuantity }}>
             {children}
         </CartContext.Provider>
     );

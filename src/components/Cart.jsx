@@ -5,14 +5,14 @@ import { useCart } from './CartContext'
 import removeIcon from '../assets/trash.svg'
 
 function Cart() {
-    const { cartContents, getCartWithQuantities, removeItemFromCart } = useCart();
-    const cartWithQuantity = getCartWithQuantities();
+    const { cartContents, getCartWithQuantities, removeItemFromCart, changeQuantity } = useCart();
+    // const cartWithQuantity = getCartWithQuantities();
     const cartSubtotal = calculateTotal();
     const cartTax = (cartSubtotal * 0.06).toFixed(2)
     const cartGrandTotal = (+cartSubtotal + +cartTax).toFixed(2)
 
     function calculateTotal() {
-        const total = cartWithQuantity.reduce((total, item) => total + (item.product_price*item.quantity), 0)
+        const total = cartContents.reduce((total, item) => total + (item.product_price*item.quantity), 0)
         return total.toFixed(2)
     }
 
@@ -31,16 +31,20 @@ function Cart() {
                         <h3>Total</h3>
                     </div>
 
-                    {cartWithQuantity.length > 0 ? (
+                    {cartContents.length > 0 ? (
                     <div className='cart-items'>
-                        {cartWithQuantity.map((item, index) => (
+                        {cartContents.map((item, index) => (
                             <div key={index} className='cart-item'>
                                 <div className='cart-item-title'>
                                     <img src={item.product_img_url} alt={item.product_name} className='cart-item-img' />
                                     <h3>{item.product_name}</h3>
                                 </div>
                                 <p className='cart-item-price'> ${item.product_price}</p>
-                                <p className='cart-item-quantity'>{item.quantity}</p>
+                                <div className='cart-item-quantity'>
+                                    <button className='quantity-button' onClick={()=>changeQuantity(item, 'decrease')}>-</button>
+                                    <p>{item.quantity}</p>
+                                    <button className='quantity-button' onClick={()=>changeQuantity(item, 'increase')}>+</button>
+                                </div>
                                 <p className='cart-item-total'>${(item.product_price * item.quantity).toFixed(2)}</p>
                                 <button className='remove-icon' onClick={()=>removeItemFromCart(item)}><img src={removeIcon} width='22px'></img></button>
                                 
