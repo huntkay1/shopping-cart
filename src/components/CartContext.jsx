@@ -8,7 +8,7 @@ export function CartProvider({ children }) {
     const [cartContents, setCartContents] = useState([]);
 
     function addToCart(product) {
-        
+
         setCartContents(prevCart => {
             const productExists = prevCart.find(item => item.product_id === product.product_id);
     
@@ -32,10 +32,21 @@ export function CartProvider({ children }) {
         setCartContents(updatedCart)
     }
 
-    function changeQuantity(selectedProduct, increment) {
-        console.log(selectedProduct, increment)
+    function changeQuantity(product, action) {
+        setCartContents(prevCart =>
+            prevCart.map(item => {
+                if (item.product_id === product.product_id) {
+                    const newQuantity = action === 'increase' ? item.quantity + 1 : item.quantity - 1;
+                    if(newQuantity > 0) {
+                        return { ...item, quantity: newQuantity };
+                    } else {
+                        removeItemFromCart(product)
+                    }
+                }
+                return item;
+            })
+        );
     }
-
 
     return (
         <CartContext.Provider value={{ cartContents, addToCart,  removeItemFromCart, changeQuantity }}>
