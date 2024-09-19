@@ -8,7 +8,7 @@ function Card({ plantData }) {
     const productImageStyle = {
         backgroundImage: `url(${IMGUrl})`,
         width: '100%',
-        height: '30vh',
+        height: '33vh',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         borderRadius: '5px', 
