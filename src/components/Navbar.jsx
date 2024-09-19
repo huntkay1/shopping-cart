@@ -7,6 +7,7 @@ function Navbar() {
 
     const { cartQuantity } = useCart();
 
+
     return (
         <section className='navbar'>
             <nav>
@@ -24,7 +25,11 @@ function Navbar() {
             </nav>
             <div className='logo'>  <h1>Leafy Greens</h1></div>
             
-            <div className='cart'><Link to='/cart'><img src={shoppingCart} className='cart-icon'></img><span id='cart-badge'>{cartQuantity}</span></Link></div>
+            <div className='cart'>
+                <Link to='/cart'>
+                    <img src={shoppingCart} className='cart-icon'></img>
+                    <span id='cart-badge' className={cartQuantity > 0 ? 'active' : ''}>{cartQuantity}</span>
+                </Link></div>
         </section>
     )
 }

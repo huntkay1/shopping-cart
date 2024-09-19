@@ -36,7 +36,7 @@
     justify-content: flex-end;
 }
 
-#cart-badge {
+#cart-badge.active {
     padding: 1px 7px;
     border-radius: 9px;
     font-size: 12px;
@@ -45,6 +45,11 @@
     font-weight: 500;
     vertical-align: top;
     margin-left: -10px; 
+}
+
+#cart-badge {
+    display: hidden;
+    color: transparent;
 }
 
 nav {
