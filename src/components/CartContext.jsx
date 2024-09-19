@@ -6,9 +6,10 @@ const CartContext = createContext();
 //Provider Component that is accessible to all children components (the components that are wrapped around by the CartProvider in main.jsx)
 export function CartProvider({ children }) {
     const [cartContents, setCartContents] = useState([]);
+    const [cartQuantity, setCartQuantity] = useState(0);
 
     function addToCart(product) {
-
+        adjustCartQuantity(1)
         setCartContents(prevCart => {
             const productExists = prevCart.find(item => item.product_id === product.product_id);
     
@@ -24,24 +25,31 @@ export function CartProvider({ children }) {
                 return [...prevCart, { ...product, quantity: 1 }];
             }
         });
-        
+    }
+
+    function adjustCartQuantity(difference) {
+        setCartQuantity(prevCartQuantity => prevCartQuantity + difference);
     }
 
     function removeItemFromCart(selectedProduct) {
         const updatedCart = cartContents.filter(item => item.product_id != selectedProduct.product_id)
+        adjustCartQuantity(-1)
         setCartContents(updatedCart)
     }
 
-    function changeQuantity(product, action) {
+    function changeProductQuantity(product, action) {
+        adjustCartQuantity(action === 'increase' ? 1 : -1);
+        
         setCartContents(prevCart =>
             prevCart.map(item => {
                 if (item.product_id === product.product_id) {
                     const newQuantity = action === 'increase' ? item.quantity + 1 : item.quantity - 1;
+
                     if(newQuantity > 0) {
                         return { ...item, quantity: newQuantity };
                     } else {
                         removeItemFromCart(product)
-                    }
+                    };
                 }
                 return item;
             })
@@ -49,7 +57,7 @@ export function CartProvider({ children }) {
     }
 
     return (
-        <CartContext.Provider value={{ cartContents, addToCart,  removeItemFromCart, changeQuantity }}>
+        <CartContext.Provider value={{ cartContents, addToCart, removeItemFromCart, changeProductQuantity, cartQuantity }}>
             {children}
         </CartContext.Provider>
     );

@@ -21,7 +21,7 @@ function Navbar() {
             </nav>
             <div className='logo'>  <h1>Leafy Greens</h1></div>
             
-            <div className='cart'><Link to='/cart'><img src={shoppingCart} className='cart-icon'></img></Link></div>
+            <div className='cart'><Link to='/cart'><img src={shoppingCart} className='cart-icon'></img><span id='cart-badge'>1</span></Link></div>
         </section>
     )
 }

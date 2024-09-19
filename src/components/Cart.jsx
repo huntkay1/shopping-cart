@@ -5,11 +5,11 @@ import { useCart } from './CartContext'
 import removeIcon from '../assets/trash.svg'
 
 function Cart() {
-    const { cartContents, getCartWithQuantities, removeItemFromCart, changeQuantity } = useCart();
+    const { cartContents, removeItemFromCart, changeProductQuantity, cartQuantity } = useCart();
     // const cartWithQuantity = getCartWithQuantities();
     const cartSubtotal = calculateTotal();
-    const cartTax = (cartSubtotal * 0.06).toFixed(2)
-    const cartGrandTotal = (+cartSubtotal + +cartTax).toFixed(2)
+    const cartTax = (cartSubtotal * 0.06).toFixed(2);
+    const cartGrandTotal = (+cartSubtotal + +cartTax).toFixed(2);
 
     function calculateTotal() {
         const total = cartContents.reduce((total, item) => total + (item.product_price*item.quantity), 0)
@@ -21,7 +21,7 @@ function Cart() {
             <Navbar />
             <section className='shopping-cart-page'>
                 <h2 className='cart-header'>
-                Your Cart - {cartContents.length} {cartContents.length === 1 ? 'Item' : 'Items'}
+                Your Cart - {cartQuantity} {cartQuantity === 1 ? 'Item' : 'Items'}
                 </h2>
                 <section className='shopping-cart'>
                     <div className='table-header'>
@@ -32,28 +32,28 @@ function Cart() {
                     </div>
 
                     {cartContents.length > 0 ? (
-                    <div className='cart-items'>
-                        {cartContents.map((item, index) => (
-                            <div key={index} className='cart-item'>
-                                <div className='cart-item-title'>
-                                    <img src={item.product_img_url} alt={item.product_name} className='cart-item-img' />
-                                    <h3>{item.product_name}</h3>
+                        <div className='cart-items'>
+                            {cartContents.map((item, index) => (
+                                <div key={index} className='cart-item'>
+                                    <div className='cart-item-title'>
+                                        <img src={item.product_img_url} alt={item.product_name} className='cart-item-img' />
+                                        <h3>{item.product_name}</h3>
+                                    </div>
+                                    <p className='cart-item-price'> ${item.product_price}</p>
+                                    <div className='cart-item-quantity'>
+                                        <button className='quantity-button' onClick={()=>changeProductQuantity(item, 'decrease')}>-</button>
+                                        <p>{item.quantity}</p>
+                                        <button className='quantity-button' onClick={()=>changeProductQuantity(item, 'increase')}>+</button>
+                                    </div>
+                                    <p className='cart-item-total'>${(item.product_price * item.quantity).toFixed(2)}</p>
+                                    <button className='remove-icon' onClick={()=>removeItemFromCart(item)}><img src={removeIcon} width='22px'></img></button>
                                 </div>
-                                <p className='cart-item-price'> ${item.product_price}</p>
-                                <div className='cart-item-quantity'>
-                                    <button className='quantity-button' onClick={()=>changeQuantity(item, 'decrease')}>-</button>
-                                    <p>{item.quantity}</p>
-                                    <button className='quantity-button' onClick={()=>changeQuantity(item, 'increase')}>+</button>
-                                </div>
-                                <p className='cart-item-total'>${(item.product_price * item.quantity).toFixed(2)}</p>
-                                <button className='remove-icon' onClick={()=>removeItemFromCart(item)}><img src={removeIcon} width='22px'></img></button>
-                                
-                            </div>
-                        ))}
-                    </div>
-                ) : (
-                    <p className='empty-cart'>Your cart is empty.</p>
-                )}
+                            ))}
+                        </div>
+                        
+                    ) : (
+                        <p className='empty-cart'>Your cart is empty.</p>
+                    )}
                 </section>
 
                 <div className='checkout-totals'>

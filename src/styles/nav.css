@@ -30,6 +30,23 @@
     width: 25px;
 }
 
+.cart {
+    width: 100%;
+    display: grid;
+    justify-content: flex-end;
+}
+
+#cart-badge {
+    padding: 1px 7px;
+    border-radius: 9px;
+    font-size: 12px;
+    background: #E7B5AC;
+    color: #212222;
+    font-weight: 500;
+    vertical-align: top;
+    margin-left: -10px; 
+}
+
 nav {
     width: 100%;
 }
@@ -38,11 +55,7 @@ nav {
     width: 100%;
 }
 
-.cart {
-    width: 100%;
-    display: grid;
-    justify-content: flex-end;
-}
+
 
 
 
