@@ -4,20 +4,29 @@ import { useState, useEffect } from 'react';
 import '../styles/ProductPage.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import CartSidebar from './CartSidebar';
 import { useCart } from './CartContext';
+
 
 
 function ProductPage() {
     const { id }  = useParams();
     const productData = getProductData();
-    const [selectedProduct, setSelectedProduct] = useState(null)
     const { addToCart } = useCart();
+
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [displayFlyout, setDisplayFlyout] = useState(false);
 
     useEffect(() => {
         if(productData) {
             setSelectedProduct(productData.find(product => product.product_id == id))
         }
     }, [productData]);
+
+    function handleAddToCart(selectedProduct) {
+        addToCart(selectedProduct);
+        setDisplayFlyout(true);
+    }
 
     return (
         <>
@@ -29,10 +38,16 @@ function ProductPage() {
                         <h2>{selectedProduct.product_name}</h2>
                         <p className='price'>${selectedProduct.product_price}</p>
                         <p className='description'>{selectedProduct.product_description}</p>
-                        <button className='pink-button' onClick={()=>addToCart(selectedProduct)}>Add to cart</button>
+                        <button className='pink-button' onClick={()=>handleAddToCart(selectedProduct)}>Add to cart</button>
                     </div>
                 </div>
             }
+            {displayFlyout && 
+                <CartSidebar 
+                    setDisplayFlyout={setDisplayFlyout}
+                />
+            }
+            
             <Footer />
         </>  
     )

@@ -12,10 +12,11 @@
 .product-details {
     color: #212222;
     padding: 1.5vh 0 0 0.5vw;
+    font-size: 14px;
 }
 
 .product-details h4 {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .card-container {
