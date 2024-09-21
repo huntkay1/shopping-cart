@@ -28,7 +28,11 @@ export function CartProvider({ children }) {
     }
 
     function adjustCartQuantity(difference) {
-        setCartQuantity(prevCartQuantity => prevCartQuantity + difference);
+        let currentCartQuantity = cartQuantity + difference;
+        if (currentCartQuantity < 0) {
+            currentCartQuantity = 0
+        }
+        setCartQuantity(currentCartQuantity);
     }
 
     function removeItemFromCart(selectedProduct) {
