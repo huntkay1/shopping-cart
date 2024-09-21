@@ -1,6 +1,7 @@
 import { useCart } from './CartContext'
 import '../styles/CartSidebar.css'
 import closeIcon from '../assets/close.svg'
+import QuantityManipulateButton from './QuantityManipulateButton';
 
 function CartSidebar({ setDisplayFlyout }) {
     const { cartContents } = useCart();
@@ -19,11 +20,16 @@ function CartSidebar({ setDisplayFlyout }) {
                     <div>
                         <p>{item.product_name}</p>
                         <p>{item.product_price}</p>
+                        <QuantityManipulateButton 
+                            quantity={item.quantity}
+                            item={item}
+                        />
                     </div>
-                    
                 </div>
                 ))}
             </div>
+
+            <button className='pink-button' id='flyout-checkout'>Checkout</button>
     
         </div>
     )

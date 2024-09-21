@@ -17,3 +17,29 @@
 .flyout-item img{
     width: 85px;
 }
+
+.flyout-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    width: 100%;
+    margin-top: 2vh;
+    padding-top: 2vh;
+    border-top: 1px solid #999999;
+}
+
+.flyout-item:first-child {
+    border: none;
+}
+
+.flyout-item p {
+    font-size: 14px;
+}
+
+#flyout-checkout {
+    margin-top: 5vh;
+    width: 300px;
+    place-self: center;
+    flex-grow: 0;
+    height: 5vh;
+}
