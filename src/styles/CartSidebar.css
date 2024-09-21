@@ -1,19 +1,28 @@
 .cart-flyout {
     height: 100%;
-    width: 350px;
-    background-color: white;
+    width: 400px;
+    background-color: #fff;
     position: absolute;
     right: 0;
     top: 0;
     display: flex;
     flex-direction: column;
-    padding: 2vh 1vw 1vw 2vh;
+    padding: 2vh 2vw 2vw 3vh;
 }
 
 .close-flyout {
     align-self: flex-end;
 }
 
+.flyout-header {
+    font-size: 24px;
+    font-weight: 500
+}
+
+.subhead {
+    font-size: 14px;
+    font-style: italic;
+}
 .flyout-item img{
     width: 85px;
 }

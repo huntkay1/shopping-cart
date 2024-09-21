@@ -4,7 +4,7 @@ import closeIcon from '../assets/close.svg'
 import QuantityManipulateButton from './QuantityManipulateButton';
 
 function CartSidebar({ setDisplayFlyout }) {
-    const { cartContents } = useCart();
+    const { cartContents, cartQuantity } = useCart();
 
     return(
         <div className='cart-flyout'>
@@ -12,6 +12,11 @@ function CartSidebar({ setDisplayFlyout }) {
             <button onClick={()=>setDisplayFlyout(false)} className='close-flyout'>
                 <img src={closeIcon} width='22px'></img>
             </button>
+
+            <div>
+                <h2 className='flyout-header'>Your Cart ({cartQuantity})</h2>
+                <p className='subhead'> Packaged with love.</p>
+            </div>
             
             <div className='flyout-cart-items'>
                 {cartContents.map((item, index) => (
