@@ -1,8 +1,9 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import '../styles/Cart.css'
+import QuantityManipulateButton from './QuantityManipulateButton'
 import { useCart } from './CartContext'
 import removeIcon from '../assets/trash.svg'
+import '../styles/Cart.css'
 
 function Cart() {
     const { cartContents, removeItemFromCart, changeProductQuantity, cartQuantity } = useCart();
@@ -40,11 +41,10 @@ function Cart() {
                                         <h3>{item.product_name}</h3>
                                     </div>
                                     <p className='cart-item-price'> ${item.product_price}</p>
-                                    <div className='cart-item-quantity'>
-                                        <button className='quantity-button' onClick={()=>changeProductQuantity(item, 'decrease')}>-</button>
-                                        <p>{item.quantity}</p>
-                                        <button className='quantity-button' onClick={()=>changeProductQuantity(item, 'increase')}>+</button>
-                                    </div>
+                                    <QuantityManipulateButton 
+                                        quantity={item.quantity}
+                                        item={item}
+                                    />
                                     <p className='cart-item-total'>${(item.product_price * item.quantity).toFixed(2)}</p>
                                     <button className='remove-icon' onClick={()=>removeItemFromCart(item)}><img src={removeIcon} width='22px'></img></button>
                                 </div>
