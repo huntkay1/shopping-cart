@@ -14,11 +14,26 @@
 .navbar li {
     font-size: 14px;
     display: inline;
-    padding-right: 3vw;
+    margin-right: 3vw;
+    position: relative;
 }
 
-.navbar li:last-child {
-    padding-right: 0;
+.navbar li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    margin: -5px 0;
+    background-color: #E7B5AC; /*Follow your text color*/
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.navbar li:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 .navbar h1 {

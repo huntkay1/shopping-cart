@@ -1,5 +1,5 @@
 import shoppingCart from '../assets/cart-icon.svg'
-import '../styles/nav.css'
+import '../styles/Navbar.css'
 import { Link } from 'react-router-dom'
 import { useCart } from './CartContext'
 
