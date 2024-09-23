@@ -4,7 +4,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    padding: 2vh 11vw 2vh 11vw;
+    padding: 2vh 16vw 2vh 16vw;
 }
 
 .navbar ul {
@@ -12,9 +12,9 @@
 }
 
 .navbar li {
-    font-size: 14px;
+    font-size: 13px;
     display: inline;
-    margin-right: 3vw;
+    margin-right: 2vw;
     position: relative;
 }
 
@@ -48,11 +48,13 @@
 
 .cart-icon {
     width: 25px;
+    height: auto;
+    vertical-align: middle;
 }
 
 .cart {
     width: 100%;
-    display: grid;
+    display: flex;
     justify-content: flex-end;
 }
 
