@@ -7,8 +7,7 @@ function Navbar() {
 
     const { cartQuantity } = useCart();
 
-    const setActive = ({ isActive }) =>
-        isActive ? "active-link" : "";
+    const setActive = ({ isActive }) => isActive ? "active-link" : "";
 
 
     return (
@@ -26,7 +25,11 @@ function Navbar() {
                     </li>
                 </ul> 
             </nav>
-            <div className='logo'>  <h1>Leafy Greens</h1></div>
+            <NavLink to='/'>
+                <div className='logo'> 
+                    <h1>Leafy Greens</h1>
+                </div>
+            </NavLink>
             
             <div className='cart'>
                 <NavLink to='/cart'>
