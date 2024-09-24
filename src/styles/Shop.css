@@ -44,6 +44,7 @@
     color: #444444;
     font-size: 13px;
     font-weight: 500;
+    height: 2vh;
 }
 
 button.active {
