@@ -1,13 +1,26 @@
-.cart-flyout {
+.overlay {
+    position: fixed; /* Cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark background with some transparency */
+    z-index: 999; /* Below the flyout, but above other content */
+}
+
+
+.cart-flyout {
+    height: 100vh;
     width: 350px;
-    background-color: #fff;
     position: absolute;
     right: 0;
     top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    padding: 2vh 3vw 2vw 3vw;
+    padding: 2vh 3vw 2vh 3vw;
+    background-color: #f2f2f2;
+    z-index: 1000;
 }
 
 .close-flyout {
@@ -23,6 +36,7 @@
     font-size: 14px;
     font-style: italic;
 }
+
 .flyout-item img{
     width: 85px;
 }

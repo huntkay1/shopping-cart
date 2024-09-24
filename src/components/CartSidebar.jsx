@@ -9,6 +9,7 @@ function CartSidebar({ setDisplayFlyout }) {
     const totals = cartTotals()
 
     return(
+        <div className='overlay'>
         <div className='cart-flyout'>
 
             <button onClick={()=>setDisplayFlyout(false)} className='close-flyout'>
@@ -50,6 +51,7 @@ function CartSidebar({ setDisplayFlyout }) {
 
             <button className='pink-button' id='flyout-checkout'>Checkout</button>
     
+        </div>
         </div>
     )
 }

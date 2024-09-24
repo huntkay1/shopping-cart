@@ -9,7 +9,6 @@ import { useCart } from './CartContext';
 
 function ProductPage() {
     const { id }  = useParams();
-    console.log(id)
     const productData = getProductData();
     const { addToCart } = useCart();
 
