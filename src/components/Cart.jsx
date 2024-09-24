@@ -46,7 +46,7 @@ function Cart() {
                                         item={item}
                                     />
                                     <p className='cart-item-total'>${(item.product_price * item.quantity).toFixed(2)}</p>
-                                    <button className='remove-icon' onClick={()=>removeItemFromCart(item)}><img src={removeIcon} width='22px'></img></button>
+                                    <button className='remove-item' onClick={()=>removeItemFromCart(item)}><img src={removeIcon} width='22px'></img></button>
                                 </div>
                             ))}
                         </div>

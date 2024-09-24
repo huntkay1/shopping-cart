@@ -50,7 +50,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
-.cart-item p, .remove-icon {
+.cart-item p, .remove-item {
     display: flex;
     align-items: center;
     padding-left: 1.5vw;
@@ -85,8 +85,13 @@
 .quantity-button {
     background-color: #212222;
     color: var(--white-color);
-    border-radius: 60px;
+    border-radius: 50px;
     padding: 0 7px;
+    height: 20px;
+}
+
+.quantity-button:hover {
+    opacity: .85;
 }
 
 .checkout-totals {
@@ -121,4 +126,8 @@
     height: 5vh;
     align-self: flex-end;
 
+}
+
+.remove-item {
+    height: 100%;
 }

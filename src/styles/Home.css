@@ -52,7 +52,6 @@
 }
 
 .hero-cta button {
-    height: 4vh;
     background-color: var(--white-color);
     border-radius: 10px;
     color: #212222;
