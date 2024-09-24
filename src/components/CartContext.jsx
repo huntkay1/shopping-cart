@@ -11,12 +11,12 @@ export function CartProvider({ children }) {
     function addToCart(product) {
         adjustCartQuantity(1)
         setCartContents(prevCart => {
-            const productExists = prevCart.find(item => item.product_id === product.product_id);
+            const productExists = prevCart.find(item => item.id === product.id);
     
             if (productExists) {
                 // Increase quantity if product already exists
                 return prevCart.map(item =>
-                    item.product_id === product.product_id
+                    item.id === product.id
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
                 );
@@ -36,7 +36,7 @@ export function CartProvider({ children }) {
     }
 
     function removeItemFromCart(selectedProduct) {
-        const updatedCart = cartContents.filter(item => item.product_id != selectedProduct.product_id)
+        const updatedCart = cartContents.filter(item => item.id != selectedProduct.id)
         adjustCartQuantity(-1)
         setCartContents(updatedCart)
     }
@@ -46,7 +46,7 @@ export function CartProvider({ children }) {
         
         setCartContents(prevCart =>
             prevCart.map(item => {
-                if (item.product_id === product.product_id) {
+                if (item.id === product.id) {
                     const newQuantity = action === 'increase' ? item.quantity + 1 : item.quantity - 1;
 
                     if(newQuantity > 0) {
@@ -61,7 +61,6 @@ export function CartProvider({ children }) {
     }
 
     function cartTotals() {
-
         const subtotal = cartContents.reduce((total, item) => total + (item.product_price * item.quantity), 0).toFixed(2);
         const tax = (subtotal * 0.06).toFixed(2);
         const grandTotal = (+subtotal + +tax).toFixed(2);

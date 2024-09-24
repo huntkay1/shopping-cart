@@ -4,7 +4,8 @@ import closeIcon from '../assets/close.svg'
 import QuantityManipulateButton from './QuantityManipulateButton';
 
 function CartSidebar({ setDisplayFlyout }) {
-    const { cartContents, cartQuantity } = useCart();
+    const { cartContents, cartQuantity, cartTotals } = useCart();
+    const totals = cartTotals()
 
     return(
         <div className='cart-flyout'>
@@ -32,6 +33,19 @@ function CartSidebar({ setDisplayFlyout }) {
                     </div>
                 </div>
                 ))}
+            </div>
+
+            <div className='flyout-totals'>
+                <div className='total-group'>         
+                    <p>Tax:</p>
+                    <p>{totals.tax}</p>
+                </div>
+                <div className='total-group'>         
+                    <p className='bold'>Total:</p>
+                    <p className='bold'>{totals.grandTotal}</p>
+                </div>
+       
+
             </div>
 
             <button className='pink-button' id='flyout-checkout'>Checkout</button>

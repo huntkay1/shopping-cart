@@ -1,13 +1,13 @@
 .cart-flyout {
     height: 100%;
-    width: 400px;
+    width: 350px;
     background-color: #fff;
     position: absolute;
     right: 0;
     top: 0;
     display: flex;
     flex-direction: column;
-    padding: 2vh 2vw 2vw 3vh;
+    padding: 2vh 3vw 2vw 3vw;
 }
 
 .close-flyout {
@@ -16,7 +16,7 @@
 
 .flyout-header {
     font-size: 24px;
-    font-weight: 500
+    font-weight: 500;
 }
 
 .subhead {
@@ -33,22 +33,40 @@
     gap: 1.5vw;
     width: 100%;
     margin-top: 2vh;
-    padding-top: 2vh;
-    border-top: 1px solid #999999;
-}
-
-.flyout-item:first-child {
-    border: none;
+    padding: 2vh 0;
+    border-bottom: 1px solid #999999;
 }
 
 .flyout-item p {
     font-size: 14px;
 }
 
+.flyout-totals {
+    margin-top: 4vh;
+}
+
+.total-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.flyout-total p {
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 600;
+    font-size: 20px;
+}
+
 #flyout-checkout {
     margin-top: 5vh;
-    width: 300px;
+    width: 100%;
     place-self: center;
     flex-grow: 0;
-    height: 5vh;
+    height: 6vh;
 }
