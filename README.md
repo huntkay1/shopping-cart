@@ -7,8 +7,7 @@ https://dribbble.com/shots/22688248-Ecommerce-Website-Design
 
 The goal of this project is to create a fully functioning ecommerce site (without the ability to complete a purchase)
 
-The next features that I will be adding are:
-- adding products to shopping cart
+<i>This site is not yet available on mobile.</i>
 
 <b>Accessible here: https://poetic-starlight-e42a0f.netlify.app/</b>
 
