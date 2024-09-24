@@ -8,7 +8,6 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export function getProductData() {
     const [plantData, setPlantData] = useState(null);
 
-
     useEffect(() => {
         const fetchData = async () => {
             try {

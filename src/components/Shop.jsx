@@ -1,9 +1,9 @@
 import Navbar from './Navbar';
-import Footer from './Footer'
-import Card from './Card'
+import Footer from './Footer';
+import Card from './Card';
 import { getProductData } from './productData';
-import { useState, useEffect } from 'react'
-import '../styles/Shop.css'
+import { useState, useEffect } from 'react';
+import '../styles/Shop.css';
 
 
 function Shop() {
@@ -77,15 +77,16 @@ function Shop() {
                         </li>
                     </ul>
                 </div>
+
                 <div className='card-container'>
                     {filteredData && 
                         filteredData.map((entry, index) => 
-                        <Card 
-                        plantData={entry}
-                        key={index}
-                        />)  
+                            <Card 
+                                plantData={entry}
+                                key={index}
+                            />
+                        )
                     }
-                    
                 </div>
                 
             </section>

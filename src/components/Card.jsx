@@ -17,7 +17,7 @@ function Card({ plantData }) {
     };
 
     return(
-        <Link to={'/details/' + plantData.product_id}>
+        <Link to={'/details/' + plantData.id}>
             <div className='product-card' >
                 <div style={productImageStyle}></div>
                 <div className='product-details'>

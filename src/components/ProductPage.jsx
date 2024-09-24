@@ -7,10 +7,9 @@ import Footer from './Footer';
 import CartSidebar from './CartSidebar';
 import { useCart } from './CartContext';
 
-
-
 function ProductPage() {
     const { id }  = useParams();
+    console.log(id)
     const productData = getProductData();
     const { addToCart } = useCart();
 
@@ -19,7 +18,7 @@ function ProductPage() {
 
     useEffect(() => {
         if(productData) {
-            setSelectedProduct(productData.find(product => product.product_id == id))
+            setSelectedProduct(productData.find(product => product.id == id))
         }
     }, [productData]);
 
