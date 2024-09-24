@@ -15,7 +15,7 @@ function App() {
             <div className='hero-cta'>
                 <h2>Spring Into Fall</h2>
                 <p>Lorem ipsum sit amet, consectetur molestiae possimus odit rerum sapiente.</p>
-                <button>Shop Fall Collection</button>
+                <button>Shop Our Fall Collection</button>
             </div>
       </section>
 

@@ -78,27 +78,30 @@
 
 .popular-1 {
     background-image: url('../assets/popular-1.png');
-    width: 220px;
-    height: 250px;
+    width: 290px;
+    height: 290px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 80% 100%;
-
+    background-position: 70% 115%;
+    margin-left: -30px;
 }
 
 .container-1 {
-    background-color: #081D17;
+    background-color: #140B03;
     border-radius: 120px 120px 10px 10px;
     height: 250px;
+    width: 220px;
 }
 
 .popular-2 {
     background-image: url('../assets/popular-2.png');
-    width: 250px;
-    height: 225px;
+    width: 290px;
+    height: 290px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0% 60%;
+    background-position: 0% 50%;
+    margin-top: -55px;
+    margin-left: -5px;
 }
 
 .container-2 {
