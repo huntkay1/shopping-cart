@@ -39,12 +39,12 @@ button {
     background-color: transparent;
     border: none;
     font-size: 13px;
+    font-weight: 500;
 }
 
 a {
     text-decoration: none;
-    /* color: #212222; */
-    color: #1A3C30;
+    color: #212222;
     font-weight: 500;
 }
 
@@ -53,6 +53,5 @@ a {
     background-color: #E7B5AC;
     height: 4vh;
     border-radius: 10px;
-    font-weight: 400;
 }
 
