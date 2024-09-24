@@ -60,8 +60,21 @@ export function CartProvider({ children }) {
         );
     }
 
+    function cartTotals() {
+
+        const subtotal = cartContents.reduce((total, item) => total + (item.product_price * item.quantity), 0).toFixed(2);
+        const tax = (subtotal * 0.06).toFixed(2);
+        const grandTotal = (+subtotal + +tax).toFixed(2);
+    
+        return {
+            subtotal,
+            tax,
+            grandTotal
+        };
+    }
+
     return (
-        <CartContext.Provider value={{ cartContents, addToCart, removeItemFromCart, changeProductQuantity, cartQuantity }}>
+        <CartContext.Provider value={{ cartContents, addToCart, removeItemFromCart, changeProductQuantity, cartQuantity, cartTotals }}>
             {children}
         </CartContext.Provider>
     );

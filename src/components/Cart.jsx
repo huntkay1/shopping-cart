@@ -6,16 +6,16 @@ import removeIcon from '../assets/trash.svg'
 import '../styles/Cart.css'
 
 function Cart() {
-    const { cartContents, removeItemFromCart, changeProductQuantity, cartQuantity } = useCart();
-    // const cartWithQuantity = getCartWithQuantities();
-    const cartSubtotal = calculateTotal();
-    const cartTax = (cartSubtotal * 0.06).toFixed(2);
-    const cartGrandTotal = (+cartSubtotal + +cartTax).toFixed(2);
+    const { cartContents, removeItemFromCart, cartQuantity, cartTotals } = useCart();
+    const totals = cartTotals();
+    // const cartSubtotal = calculateTotal();
+    // const cartTax = (cartSubtotal * 0.06).toFixed(2);
+    // const cartGrandTotal = (+cartSubtotal + +cartTax).toFixed(2);
 
-    function calculateTotal() {
-        const total = cartContents.reduce((total, item) => total + (item.product_price*item.quantity), 0)
-        return total.toFixed(2)
-    }
+    // function calculateTotal() {
+    //     const total = cartContents.reduce((total, item) => total + (item.product_price*item.quantity), 0)
+    //     return total.toFixed(2)
+    // }
 
     return(
         <>
@@ -59,15 +59,15 @@ function Cart() {
                 <div className='checkout-totals'>
                     <div className='cart-total-section border'>
                         <h4 className='cart-total-header'>Subtotal</h4>
-                        <p>${cartSubtotal}</p>
+                        <p>${totals.subtotal}</p>
                     </div>
                     <div className='cart-total-section border'>
                         <h4 className='cart-total-header'>Tax</h4>
-                        <p>${cartTax}</p>
+                        <p>${totals.tax}</p>
                     </div>
                     <div className='cart-total-section'>
                         <h4 className='cart-total-header'>Total</h4>
-                        <p className='grand-total'> ${cartGrandTotal}</p>
+                        <p className='grand-total'> ${totals.grandTotal}</p>
                     </div>
 
                     <button className='pink-button'>Checkout</button>
