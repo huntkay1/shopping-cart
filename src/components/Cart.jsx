@@ -8,14 +8,6 @@ import '../styles/Cart.css'
 function Cart() {
     const { cartContents, removeItemFromCart, cartQuantity, cartTotals } = useCart();
     const totals = cartTotals();
-    // const cartSubtotal = calculateTotal();
-    // const cartTax = (cartSubtotal * 0.06).toFixed(2);
-    // const cartGrandTotal = (+cartSubtotal + +cartTax).toFixed(2);
-
-    // function calculateTotal() {
-    //     const total = cartContents.reduce((total, item) => total + (item.product_price*item.quantity), 0)
-    //     return total.toFixed(2)
-    // }
 
     return(
         <>

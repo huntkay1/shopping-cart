@@ -2,9 +2,10 @@ import { useCart } from './CartContext'
 import '../styles/CartSidebar.css'
 import closeIcon from '../assets/close.svg'
 import QuantityManipulateButton from './QuantityManipulateButton';
+import removeIcon from '../assets/trash.svg'
 
 function CartSidebar({ setDisplayFlyout }) {
-    const { cartContents, cartQuantity, cartTotals } = useCart();
+    const { cartContents, cartQuantity, cartTotals, removeItemFromCart } = useCart();
     const totals = cartTotals()
 
     return(
@@ -31,6 +32,7 @@ function CartSidebar({ setDisplayFlyout }) {
                             item={item}
                         />
                     </div>
+                    <button className='remove-item' onClick={()=>removeItemFromCart(item)}><img src={removeIcon} height='22px'></img></button>
                 </div>
                 ))}
             </div>
@@ -44,8 +46,6 @@ function CartSidebar({ setDisplayFlyout }) {
                     <p className='bold'>Total:</p>
                     <p className='bold'>{totals.grandTotal}</p>
                 </div>
-       
-
             </div>
 
             <button className='pink-button' id='flyout-checkout'>Checkout</button>
