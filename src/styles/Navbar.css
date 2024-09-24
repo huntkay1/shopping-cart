@@ -4,7 +4,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    padding: 2vh 16vw 2vh 16vw;
+    padding: 1vh 16vw 1vh 16vw;
 }
 
 .navbar ul {
@@ -42,7 +42,7 @@
 }
 
 .navbar h1 {
-    color: #36453B;
+    color: #1A3C30;
     text-align: center;
 }
 

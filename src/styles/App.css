@@ -18,6 +18,14 @@ p, button, li, input, h3, h4, span {
     margin: 0;
 }
 
+.green-text {
+   color: #212222;
+}
+
+.white-text {
+    color: #F5F9E9;
+}
+
 h2 {
     font-size: 40px;
 }
@@ -35,7 +43,9 @@ button {
 
 a {
     text-decoration: none;
-    color: #212222;
+    /* color: #212222; */
+    color: #1A3C30;
+    font-weight: 500;
 }
 
 .pink-button {
