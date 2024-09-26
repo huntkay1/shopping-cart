@@ -29,7 +29,7 @@
 }
 
 .hero-cta {
-    background-color: #140B03;
+    background-color: #201716;
     grid-column: 3 / -1;
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@
 
 .hero-cta p {
     line-height: 2;
-    font-weight: 400;
+    opacity: 0.75;
     margin-bottom: 2vh;
 }
 
@@ -65,7 +65,12 @@
     padding: 60px 18vw;
     height: 40vh;
     gap: 7vw;
-    color: #212222;
+    color: #3A422A;
+}
+
+.popular p {
+    font-weight: 500;
+    opacity: 0.75;
 }
 
 .popular-images {
@@ -85,7 +90,7 @@
 }
 
 .container-1 {
-    background-color: #140B03;
+    background-color: #06271B;
     border-radius: 120px 120px 10px 10px;
     height: 250px;
     width: 220px;
@@ -123,19 +128,19 @@
 
 /* SIGNUP */
 .signup-section {
-    height: 20vh;
-    background-color: #140B03;
+    height: 18vh;
+    background-color: #1A200E;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 0.5px solid #545454;
+    border-bottom: 0.2px solid #859D7D;
 }
 
 .signup-section h2 {
     color: var(--white-color);
     margin-bottom: 2vh;
-    font-size: 3vh;
+    font-size: 2.8vh;
 }
 
 .input-container {
@@ -144,7 +149,7 @@
 
 .signup-section input {
     background-color: transparent;
-    border: 0.75px solid #545454;
+    border: 0.75px solid #859D7D;
     border-radius: 5px 0 0 5px;
     color: var(--white-color);
     height: 5vh;
@@ -152,6 +157,11 @@
     padding-left: 12px;
     padding-right: -105px;
     font-size: 16px;
+}
+
+.signup-section input::placeholder {
+    color: #859D7D;
+    opacity: 0.75;
 }
 
 .signup-section input:focus {
@@ -167,6 +177,9 @@
     gap: 3px;
     padding: 0 30px;
     border-radius: 0 5px 5px 0;
+    height: 100%;
+    color: #3C4D2B;
+
 }
 
 

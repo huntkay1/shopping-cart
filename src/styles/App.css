@@ -18,14 +18,6 @@ p, button, li, input, h3, h4, span {
     margin: 0;
 }
 
-.green-text {
-   color: #212222;
-}
-
-.white-text {
-    color: #F5F9E9;
-}
-
 h2 {
     font-size: 40px;
 }
@@ -45,13 +37,14 @@ button {
 
 a {
     text-decoration: none;
-    color: #212222;
+    color: #3A422A;
     font-weight: 500;
 }
 
 .pink-button {
     margin-top: 10px;
-    background-color: #E7B5AC;
+    background-color: #201716;
+    color: var(--white-color);
     height: 5vh;
     border-radius: 10px;
 }

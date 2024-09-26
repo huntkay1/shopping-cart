@@ -1,10 +1,10 @@
 footer {
     display: flex;
     justify-content: center;
-    color: #ADADAD;
+    color: var(--white-color);
     padding: 4vh 0 3vh 0;
     gap: 10vw;
-    background-color: #140B03;
+    background-color: #1A200E;
 }
 
 footer ul {
@@ -16,12 +16,14 @@ footer li {
     font-size: 12px;
     margin-bottom: 0.8vh;
     font-weight: 300;
+    opacity: 0.75;
 }
 
 footer h3 {
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 8px;
+    opacity: 0.75;
 }
 
 
