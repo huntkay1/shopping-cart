@@ -62,7 +62,7 @@ function Cart() {
                         <p className='grand-total'> ${totals.grandTotal}</p>
                     </div>
 
-                    <button className='pink-button'>Checkout</button>
+                    <button className='green-button'>Checkout</button>
                 </div>
 
             </section>

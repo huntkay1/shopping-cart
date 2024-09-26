@@ -36,7 +36,7 @@ function ProductPage() {
                         <h2>{selectedProduct.product_name}</h2>
                         <p className='price'>${selectedProduct.product_price}</p>
                         <p className='description'>{selectedProduct.product_description}</p>
-                        <button className='pink-button' onClick={()=>handleAddToCart(selectedProduct)}>Add to cart</button>
+                        <button className='green-button' onClick={()=>handleAddToCart(selectedProduct)}>Add to cart</button>
                     </div>
                 </div>
             }

@@ -41,15 +41,15 @@ a {
     font-weight: 500;
 }
 
-.pink-button {
+.green-button {
     margin-top: 10px;
-    background-color: #201716;
+    background-color: #77966D;
     color: var(--white-color);
     height: 5vh;
     border-radius: 10px;
 }
 
-.pink-button:hover {
+.green-button:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     transition: .2s ease-in-out;
 }

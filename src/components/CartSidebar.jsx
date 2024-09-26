@@ -49,7 +49,7 @@ function CartSidebar({ setDisplayFlyout }) {
                 </div>
             </div>
 
-            <button className='pink-button' id='flyout-checkout'>Checkout</button>
+            <button className='green-button' id='flyout-checkout'>Checkout</button>
     
         </div>
         </div>
