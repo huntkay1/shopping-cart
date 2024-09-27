@@ -2,13 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 1vh 16vw 1vh 16vw;
+    width: 100%;
+    padding: 1.5vh 15vw;
+}
+
+#nav-align {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .navbar ul {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 .navbar li {
@@ -39,11 +43,6 @@
 .active-link{
     border-bottom: 2px solid #E7B5AC;
     padding-bottom: 3px;
-}
-
-.navbar h1 {
-    color: #3C4D2B;
-    text-align: center;
 }
 
 .cart-icon {
@@ -79,8 +78,27 @@ nav {
 }
 
 .logo {
-    width: 200px;
+    width: 100%;
+    color: #3C4D2B;
+    text-align: center;
 }
+
+.logo h1 {
+    font-size: 25px;
+}
+
+.navbar-toggler {
+    width: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    stroke: #1A200E;
+}
+
+
+
+
+
 
 
 

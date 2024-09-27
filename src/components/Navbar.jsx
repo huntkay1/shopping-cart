@@ -11,32 +11,39 @@ function Navbar() {
 
 
     return (
-        <section className='navbar'>
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to='/' className={setActive}>Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/shop' className={setActive}>Shop</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/about' className={setActive}>About</NavLink>
-                    </li>
-                </ul> 
-            </nav>
-            <NavLink to='/'>
-                <div className='logo'> 
-                    <h1>Leafy Greens</h1>
-                </div>
-            </NavLink>
-            
-            <div className='cart'>
-                <NavLink to='/cart'>
-                    <img src={shoppingCart} className='cart-icon'></img>
-                    <span id='cart-badge' className={cartQuantity > 0 ? 'active' : ''}>{cartQuantity}</span>
-                </NavLink></div>
-        </section>
+<nav className='navbar navbar-expand-md' id='nav-align'>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"  aria-controls='navbarTogglerDemo02'>
+        <span className="navbar-toggler-icon"></span>
+    </button>
+
+    <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul className="navbar-nav justify-content-center">
+            <li className='nav-item'>
+                <NavLink to='/' className={setActive}>Home</NavLink>
+            </li>
+            <li className='nav-item'>
+                <NavLink to='/shop' className={setActive}>Shop</NavLink>
+            </li>
+            <li className='nav-item'>
+                <NavLink to='/about' className={setActive}>About</NavLink>
+            </li>
+        </ul> 
+    </div>
+
+    <NavLink to='/' className='logo navbar-brand'>
+        <div> 
+            <h1>Leafy Greens</h1>
+        </div>
+    </NavLink>
+
+    <div className='cart'>
+        <NavLink to='/cart'>
+            <img src={shoppingCart} className='cart-icon'></img>
+            <span id='cart-badge' className={cartQuantity > 0 ? 'active' : ''}>{cartQuantity}</span>
+        </NavLink>
+    </div>
+</nav>
+
     )
 }
 
