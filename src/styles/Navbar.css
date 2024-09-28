@@ -2,23 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .navbar {
-    width: 100%;
+    display: flex;
+    align-items: center;
     padding: 1.5vh 15vw;
 }
 
-#nav-align {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
 .navbar ul {
-    display: inline-block !important;
+    display: flex;
+    gap: 20px;
+    width: 100%;
 }
 
 .navbar li {
     font-size: 13px;
-    display: inline;
-    margin-right: 2vw;
     position: relative;
 }
 
@@ -46,8 +42,6 @@
 }
 
 .cart-icon {
-    width: 25px;
-    height: auto;
     vertical-align: middle;
 }
 
@@ -73,10 +67,6 @@
     color: transparent;
 }
 
-nav {
-    width: 100%;
-}
-
 .logo {
     width: 100%;
     color: #3C4D2B;
@@ -87,13 +77,7 @@ nav {
     font-size: 25px;
 }
 
-.navbar-toggler {
-    width: 50px;
-    border: none;
-    display: flex;
-    align-items: center;
-    stroke: #1A200E;
-}
+
 
 
 

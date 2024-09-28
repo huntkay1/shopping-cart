@@ -7,7 +7,6 @@ import ProductPage from './components/ProductPage'
 import Cart from './components/Cart'
 import { CartProvider } from './components/CartContext'
 import './index.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
 
 
 const routes = [
