@@ -132,6 +132,31 @@
 
 }
 
+@media (max-width: 375px) {
+    .navbar {
+        padding: 20px 10px;
+    }
+    .logo {
+        font-size: 13px;
+    }
+
+    .menu img{
+        width: 25px;
+    }
+
+    .cart img {
+        width: 20px;
+    }
+
+    .navbar li {
+        font-size: 12px;
+    }
+
+    .navbar ul {
+        margin-top: 20px;
+    }
+}
+
 
 
 

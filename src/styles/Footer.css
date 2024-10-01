@@ -26,4 +26,14 @@ footer h3 {
     opacity: 0.75;
 }
 
+@media (max-width: 375px) {
+    footer li {
+        font-size: 9px;
+    }
+
+    footer h3 {
+        font-size: 10px;
+    }
+}
+
 
