@@ -8,7 +8,7 @@ function Card({ plantData }) {
     const productImageStyle = {
         backgroundImage: `url(${IMGUrl})`,
         width: '100%',
-        height: '33vh',
+        height: '300px',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         borderRadius: '5px', 
@@ -19,7 +19,7 @@ function Card({ plantData }) {
     return(
         <Link to={'/details/' + plantData.id}>
             <div className='product-card' >
-                <div style={productImageStyle}></div>
+                <div className='card-image'style={productImageStyle}></div>
                 <div className='product-details'>
                     <h4>{plantData.product_name}</h4>
                     <p>${plantData.product_price}</p>
