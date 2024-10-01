@@ -2,15 +2,21 @@ import shoppingCart from '../assets/cart-icon.svg';
 import '../styles/Navbar.css';
 import { NavLink } from 'react-router-dom';
 import { useCart } from './CartContext';
+import { useState } from 'react';
+import HamburgerMenuIcon from '../assets/hamburger-menu.svg';
 
 function Navbar() {
     const { cartQuantity } = useCart();
 
     const setActive = ({ isActive }) => (isActive ? 'active-link' : '');
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <nav className='navbar'>
-            <ul>
+            <button className='menu' onClick={() => { setMenuOpen(!menuOpen) }}>
+                <img src={HamburgerMenuIcon} width='35px'></img>
+            </button>
+            <ul className={menuOpen ? 'open' : ''}>
                 <li >
                     <NavLink to='/' className={setActive}>Home</NavLink>
                 </li>
@@ -22,6 +28,8 @@ function Navbar() {
                 </li>
             </ul>
 
+
+
             <NavLink to='/' className='logo'>
                 <h1>Leafy Greens</h1>
             </NavLink>
@@ -32,6 +40,8 @@ function Navbar() {
                     <span id='cart-badge' className={cartQuantity > 0 ? 'active' : ''}>{cartQuantity}</span>
                 </NavLink>
             </div>
+
+
 
         </nav>
     );
