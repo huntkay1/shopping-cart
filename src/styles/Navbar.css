@@ -14,7 +14,7 @@
 
 .navbar ul {
     display: flex;
-    gap: 20px;
+    gap: 3vw;
     width: 100%;
 }
 
@@ -83,13 +83,6 @@
     display: none;
 }
 
-.menu span {
-    height: 0.4rem;
-    width: 100%;
-    background-color: black;
-    border-radius: 0.2rem;
-}
-
 @media (max-width: 910px) {
 
     .navbar {
@@ -136,6 +129,7 @@
     .navbar {
         padding: 20px 10px;
     }
+
     .logo {
         font-size: 13px;
     }
@@ -154,6 +148,17 @@
 
     .navbar ul {
         margin-top: 20px;
+    }
+
+    #cart-badge.active {
+        padding: 1px 5px;
+        border-radius: 9px;
+        font-size: 9px;
+        background: #E7B5AC;
+        color: #212222;
+        font-weight: 500;
+        vertical-align: top;
+        margin-left: -10px; 
     }
 }
 

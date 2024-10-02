@@ -10,6 +10,7 @@
 
 .empty-cart {
     text-align: center;
+    color: #3A422A;
 }
 
 .cart-header {
@@ -18,13 +19,14 @@
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 8vh;
+    color: #1A200E;
 }
 
 .table-header {
     width: 100%;
     display: grid;
     grid-template-columns: 5fr 2fr 2fr 2fr 1fr;
-    border-bottom: 1px solid #212222;
+    border-bottom: 0.5px solid #212222;
     margin-bottom: 5vh;
     padding-bottom: 2vh;
 }
@@ -130,4 +132,8 @@
 
 .remove-item {
     height: 100%;
+}
+
+.checkout-button {
+    height: 6vh;
 }
