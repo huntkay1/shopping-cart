@@ -9,6 +9,14 @@ The goal of this project is to create a fully functioning ecommerce site (withou
 
 <i>This site is not yet available on mobile.</i>
 
+With this project, I have learned how to:
+    - use React Router
+    - implement the UseContext API
+    - create and use a custom hook
+    - create and use my own database
+    - build my own REST API
+    - build a responsive, collapisble navbar
+
 <b>Accessible here: https://poetic-starlight-e42a0f.netlify.app/</b>
 
 
