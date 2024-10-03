@@ -15,7 +15,6 @@
 .navbar ul {
     display: flex;
     gap: 3vw;
-    width: 100%;
 }
 
 .navbar li {
@@ -125,9 +124,10 @@
 
 }
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
     .navbar {
-        padding: 20px 10px;
+        padding: 10px;
+        width: 100%;
     }
 
     .logo {
@@ -160,7 +160,7 @@
         vertical-align: top;
         margin-left: -10px; 
     }
-}
+} */
 
 
 

@@ -27,6 +27,12 @@ footer h3 {
 }
 
 @media (max-width: 375px) {
+
+    footer {
+       gap: 8vw;
+       width: 100vw; 
+    }
+
     footer li {
         font-size: 9px;
     }

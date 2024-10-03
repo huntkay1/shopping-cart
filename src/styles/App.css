@@ -6,6 +6,7 @@
 body {
     margin: 0;
     background-color: #F5F9E9;
+    box-sizing: border-box;
 }
 
 h1, h2 {

@@ -8,7 +8,6 @@ import Cart from './components/Cart'
 import { CartProvider } from './components/CartContext'
 import './index.css';
 
-
 const routes = [
   {
     path: "/",
