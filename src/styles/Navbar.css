@@ -124,43 +124,7 @@
 
 }
 
-/* @media (max-width: 375px) {
-    .navbar {
-        padding: 10px;
-        width: 100%;
-    }
 
-    .logo {
-        font-size: 13px;
-    }
-
-    .menu img{
-        width: 25px;
-    }
-
-    .cart img {
-        width: 20px;
-    }
-
-    .navbar li {
-        font-size: 12px;
-    }
-
-    .navbar ul {
-        margin-top: 20px;
-    }
-
-    #cart-badge.active {
-        padding: 1px 5px;
-        border-radius: 9px;
-        font-size: 9px;
-        background: #E7B5AC;
-        color: #212222;
-        font-weight: 500;
-        vertical-align: top;
-        margin-left: -10px; 
-    }
-} */
 
 
 

@@ -5,6 +5,7 @@ import { getProductData } from './productData';
 import { useState, useEffect } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import '../styles/Shop.css';
+import '../styles/Dropdown.scss';
 
 
 function Shop() {
@@ -34,19 +35,21 @@ function Shop() {
         <>
             <Navbar />
             <section className='shop'>
-                <Dropdown className='dropdown'>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        Categories
-                    </Dropdown.Toggle>
+                    <div className='dropdown'>
+                    <Dropdown>
+                        <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Filter
+                        </Dropdown.Toggle>
 
-                    <Dropdown.Menu>
-                        <Dropdown.Item onClick={() => filterData('All Plants')}>All Plants</Dropdown.Item>
-                        <Dropdown.Item onClick={() => filterData('Tropical')}>Tropical</Dropdown.Item>
-                        <Dropdown.Item onClick={() => filterData('Succulents')}>Cacti & Succulents</Dropdown.Item>
-                        <Dropdown.Item onClick={() => filterData('Foliage')}>Foliage</Dropdown.Item>
-                        <Dropdown.Item onClick={() => filterData('Accessories')}>Pots & Accessories</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
+                        <Dropdown.Menu>
+                            <Dropdown.Item onClick={() => filterData('All Plants')}>All Plants</Dropdown.Item>
+                            <Dropdown.Item onClick={() => filterData('Tropical')}>Tropical</Dropdown.Item>
+                            <Dropdown.Item onClick={() => filterData('Succulents')}>Cacti & Succulents</Dropdown.Item>
+                            <Dropdown.Item onClick={() => filterData('Foliage')}>Foliage</Dropdown.Item>
+                            <Dropdown.Item onClick={() => filterData('Accessories')}>Pots & Accessories</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                    </div>
                 <div className='shop-nav'>
                     <ul>
                         <li>
