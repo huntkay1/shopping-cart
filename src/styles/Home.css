@@ -140,6 +140,7 @@
 .signup-section h2 {
     color: var(--white-color);
     margin-bottom: 2vh;
+    font-size: 25px;
 }
 
 .input-container {

@@ -19,6 +19,7 @@ function Cart() {
                 <section className='shopping-cart'>
                     <div className='table-header'>
                         <h3>Item</h3>
+                        <span></span>
                         <h3>Price</h3>
                         <h3>Quantity</h3>
                         <h3>Total</h3>
@@ -28,10 +29,8 @@ function Cart() {
                         <div className='cart-items'>
                             {cartContents.map((item, index) => (
                                 <div key={index} className='cart-item'>
-                                    <div className='cart-item-title'>
-                                        <img src={item.product_img_url} alt={item.product_name} className='cart-item-img' />
-                                        <h3>{item.product_name}</h3>
-                                    </div>
+                                    <img src={item.product_img_url} alt={item.product_name} className='cart-item-img' />
+                                    <p className='cart-product-name'>{item.product_name}</p>
                                     <p className='cart-item-price'> ${item.product_price}</p>
                                     <QuantityManipulateButton 
                                         quantity={item.quantity}
