@@ -7,7 +7,6 @@ import '../styles/Cart.css'
 
 function Cart() {
     const { cartContents, removeItemFromCart, cartQuantity, cartTotals } = useCart();
-    const totals = cartTotals();
 
     return(
         <>
@@ -50,15 +49,15 @@ function Cart() {
                 <div className='checkout-totals'>
                     <div className='cart-total-section border'>
                         <h4 className='cart-total-header'>Subtotal</h4>
-                        <p>${totals.subtotal}</p>
+                        <p>${cartTotals.subtotal}</p>
                     </div>
                     <div className='cart-total-section border'>
                         <h4 className='cart-total-header'>Tax</h4>
-                        <p>${totals.tax}</p>
+                        <p>${cartTotals.tax}</p>
                     </div>
                     <div className='cart-total-section'>
                         <h4 className='cart-total-header'>Total</h4>
-                        <p className='grand-total'> ${totals.grandTotal}</p>
+                        <p className='grand-total'> ${cartTotals.grandTotal}</p>
                     </div>
 
                     <button className='green-button checkout-button'>Checkout</button>

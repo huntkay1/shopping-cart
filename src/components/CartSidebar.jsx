@@ -6,7 +6,6 @@ import removeIcon from '../assets/trash.svg'
 
 function CartSidebar({ setDisplayFlyout }) {
     const { cartContents, cartQuantity, cartTotals, removeItemFromCart } = useCart();
-    const totals = cartTotals()
 
     return(
         <div className='overlay'>
@@ -41,11 +40,11 @@ function CartSidebar({ setDisplayFlyout }) {
             <div className='flyout-totals'>
                 <div className='total-group'>         
                     <p>Tax:</p>
-                    <p>{totals.tax}</p>
+                    <p>{cartTotals.tax}</p>
                 </div>
                 <div className='total-group'>         
                     <p className='bold'>Total:</p>
-                    <p className='bold'>{totals.grandTotal}</p>
+                    <p className='bold'>{cartTotals.grandTotal}</p>
                 </div>
             </div>
 
