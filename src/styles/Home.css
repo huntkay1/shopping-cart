@@ -266,6 +266,12 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .hero-two {
+        display: none;
+    }
+}
+
 
 
 
