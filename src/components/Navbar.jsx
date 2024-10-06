@@ -24,7 +24,7 @@ function Navbar() {
                     <NavLink to='/shop' className={setActive}>Shop</NavLink>
                 </li>
                 <li >
-                    <NavLink to='/about' className={setActive}>About</NavLink>
+                    <NavLink to='/about' className={setActive}>Our Story</NavLink>
                 </li>
             </ul>
 
