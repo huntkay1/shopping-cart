@@ -13,7 +13,6 @@ function Card({ plantData }) {
         backgroundRepeat: "no-repeat",
         borderRadius: '5px', 
         backgroundPosition: '100% 50%',
-        boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
     };
 
     return(
