@@ -102,7 +102,7 @@ button.active {
 
     .card-container {
         grid-template-columns: 1fr 1fr 1fr !important;
-        grid-auto-rows: 30vh;
+        grid-auto-rows: 33vh;
         row-gap: 8vh;
         padding: 50px 5vw;
         margin: auto;

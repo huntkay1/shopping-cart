@@ -1,4 +1,5 @@
-import '../styles/Footer.css'
+import '../styles/Footer.css';
+import Monstera from '../assets/leaf.svg';
 
 function Footer() {
     return(
@@ -31,6 +32,8 @@ function Footer() {
                     <li>TikTok</li>
                 </ul>
             </div>
+
+            <img src={Monstera} width='500px' className='leaf-icon'></img>
         </footer>
     )
 }

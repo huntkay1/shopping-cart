@@ -1,29 +1,37 @@
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     color: var(--white-color);
     padding: 4vh 0 3vh 0;
-    gap: 10vw;
+    gap: 5vw;
     background-color: #1A200E;
+    position: relative;
+    padding-left: 20vw;
+    overflow: hidden;
 }
 
 footer ul {
     padding: 0;
-    margin: 0;
 }
 
 footer li {
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 0.8vh;
     font-weight: 300;
     opacity: 0.75;
 }
 
 footer h3 {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 600;
     margin-bottom: 8px;
     opacity: 0.75;
+}
+
+.leaf-icon {
+    position: absolute;
+    bottom: -220px;
+    right: 10px;
 }
 
 @media (max-width: 430px) {
