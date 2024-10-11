@@ -83,7 +83,7 @@ button.active {
     }
 
     .shop-nav {
-        height: 7vh;
+        height: 5vh;
         width: 100vw;
         display: flex;
         justify-content: center;
@@ -102,9 +102,9 @@ button.active {
 
     .card-container {
         grid-template-columns: 1fr 1fr 1fr !important;
-        grid-auto-rows: 33vh;
-        row-gap: 8vh;
-        padding: 50px 5vw;
+        grid-auto-rows: 28vh;
+        row-gap: 0 !important;
+        padding: 50px 4vw;
         margin: auto;
     }
 
@@ -128,6 +128,7 @@ button.active {
         row-gap: 8vh;
         padding-bottom: 0;
     }
+
     .product-card {
         width: 200px;
     }
@@ -160,8 +161,7 @@ button.active {
     .card-container {
         display: grid;
         grid-template-columns: 1fr 1fr !important;
-        grid-auto-rows: 22vh;
-        row-gap: 5vh;
+        grid-auto-rows: 28vh;
         padding: 30px 20px;
         margin: 0;
     }
@@ -191,6 +191,6 @@ button.active {
     .card-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 28vh;
+        grid-auto-rows: 32vh;
     }
 }
