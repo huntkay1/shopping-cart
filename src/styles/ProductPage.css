@@ -19,7 +19,9 @@
 }
 
 .product-page img {
-    height: 70vh;
+    height: 100%;
+    width: 35vw;
+    min-width: 350px;
     border-radius: 5px;
 }
 
@@ -35,6 +37,7 @@
 
 .product-information button {
     width: 11vw;
+    min-width: 120px;
 }
 
 @media (max-width: 430px) {
