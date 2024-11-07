@@ -1,5 +1,5 @@
 .about-page {
-    padding: 80px 18vw;
+    padding: 20px 5vw;
     color: #3A422A;
     display: grid;
     grid-template-columns: auto auto;
@@ -36,8 +36,10 @@
 
 .about-us-hero {
     width: 30vw;
-    height: 100%;
+    height: auto;
     grid-column: 1 / 2 ;
+    border-radius: 5px;
+    margin: auto;
 }
 
 .spacer {
@@ -89,9 +91,21 @@
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
+
     .copy {
         min-width: 350px;
         max-width: 35vw;
+        padding-left: 3vw;
+        padding-bottom: 3vh;
+    }
+
+    .about-us-hero {
+        min-width: 350px;
+        margin-top: 0;
+    }
+
+    .sub-header {
+        grid-column: 1 / -1;
     }
 }
