@@ -1,5 +1,5 @@
 .back-button {
-    margin-left: 15vw;
+    margin: 2vh 0 0 15vw;
     font-size: 16px;
     color: #3A422A;
     display: flex;
@@ -12,10 +12,7 @@
     display: flex;
     justify-content: center;
     gap: 5vw;
-    margin-top: 1vh;
-    margin-bottom: 5vh;
-    margin-left: 18vw;
-    margin-right: 18vw;
+    margin: 5vh 18vw 10vh 18vw;
 }
 
 .product-page img {

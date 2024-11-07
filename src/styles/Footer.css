@@ -2,7 +2,8 @@ footer {
     display: flex;
     justify-content: center;
     color: var(--white-color);
-    padding: 4vh 0 3vh 0;
+    /* padding: 4vh 0 3vh 0; */
+    padding: 10% 0;
     gap: 5vw;
     background-color: #1A200E;
     position: relative;
