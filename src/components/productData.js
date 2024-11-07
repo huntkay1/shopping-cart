@@ -13,7 +13,7 @@ export function getProductData() {
             try {
                 // Fetch data from Supabase
                 const { data, error } = await supabase
-                    .from('plant-shop-data')  // Use the correct table name
+                    .from('plant-shop-data')  
                     .select('*');
 
                 if (error) {
