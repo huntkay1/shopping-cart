@@ -1,3 +1,13 @@
+.back-button {
+    margin-left: 15vw;
+    font-size: 16px;
+    color: #3A422A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+}
+
 .product-page {
     display: flex;
     justify-content: center;

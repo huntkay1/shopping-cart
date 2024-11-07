@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 import { getProductData } from './productData';
 import { useState, useEffect } from 'react';
 import '../styles/ProductPage.css';
@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import CartSidebar from './CartSidebar';
 import { useCart } from './CartContext';
+import BackButton from '../assets/back.svg';
 
 function ProductPage() {
     const { id }  = useParams();
@@ -29,6 +30,11 @@ function ProductPage() {
     return (
         <>
             <Navbar />
+
+            <NavLink to='/shop'>
+                <button className='back-button'><img src={BackButton}></img>Back</button>
+            </NavLink>
+            
             {selectedProduct && 
                 <div className='product-page'>
                     <img src={selectedProduct.product_img_url}></img>
