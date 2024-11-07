@@ -63,6 +63,7 @@
         font-size: 16px;
         width: 100%;
         grid-row: 2 / 3;
+        grid-column: 2/-1;
         padding-left: 3vw;
         place-content: center;
     }
