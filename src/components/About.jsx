@@ -9,14 +9,12 @@ function About() {
         <>
         <Navbar></Navbar>
         <section className='about-page'>
-            <div className='title'>
                 <h2 className='large-header'>Welcome</h2>
                 <h3 className='sub-header'>
                     Leafy Greens was founded on the premise
                     that plants make us happier. 
                 </h3>
-            </div>
-            
+
             <img src={AboutUsImg} className='about-us-hero'></img>
             <div className='copy'>
                 <p>
