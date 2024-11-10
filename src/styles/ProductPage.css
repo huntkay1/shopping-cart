@@ -20,6 +20,7 @@
     width: 35vw;
     min-width: 350px;
     border-radius: 5px;
+    align-self: center;
 }
 
 .product-information {
@@ -43,10 +44,6 @@
         margin: 20px 20px;
     }
 
-    .product-page img {
-        height: 45vh;
-    }
-
     .product-information {
         margin-top: 10px;
     }
@@ -65,6 +62,10 @@
 
     .product-information .price {
         font-size: 20px;
+    }
+
+    .back-button {
+        margin-left: 20px; 
     }
 }
 
