@@ -3,11 +3,17 @@
 Design inspiration for this project came from:
 https://dribbble.com/shots/22688248-Ecommerce-Website-Design
 
-<b>This website is still under construction</b>, but I added it to view on GitHub as I continue to build and add features. 
+<b>Site accessible here:</b> https://poetic-starlight-e42a0f.netlify.app/
 
-The goal of this project is to create a fully functioning ecommerce site (without the ability to complete a purchase)
+This is a fully funcitonal e-commerce site (without the ability to purchase) for the fictional plant shop "Leafy Greens".
 
-<i>This site is not yet available on mobile.</i>
+While creating this site, I decided I would like to build my own
+database, coupled with a custom-built API. For this reason, I learned
+SQL/MySQL, Express.js, and Node.js. The API was successful and the 
+code for it is accessible here: https://github.com/huntkay1/plant-shop-api
+
+In order to find a cost-effective host for this data, I opted to creating a database with Supabase and utilized their API.
+
 
 With this project, I have learned how to:
     - use React Router
@@ -17,6 +23,6 @@ With this project, I have learned how to:
     - build my own REST API
     - build a responsive, collapisble navbar
 
-<b>Accessible here: https://poetic-starlight-e42a0f.netlify.app/</b>
+
 
 
