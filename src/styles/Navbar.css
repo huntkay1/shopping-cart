@@ -8,7 +8,7 @@
     padding: 20px 15vw;
     position: sticky;
     top: 0;
-    background-color: var(--white-color);
+    background-color: var(--background-color);
     z-index: 1;
 }
 

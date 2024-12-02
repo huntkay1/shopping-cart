@@ -1,6 +1,4 @@
-:root {
-    --white-color: #F5F9E9;
-}
+
 
 /* HERO SECTION */
 .hero {
@@ -35,7 +33,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 0 40px;
-    color: var(--white-color);
+    color: var(--background-color);
 }
 
 .hero-cta h2 {
@@ -52,7 +50,7 @@
 }
 
 .hero-cta button {
-    background-color: var(--white-color);
+    background-color: var(--background-color);
     border-radius: 10px;
     color: #212222;
 }
@@ -138,7 +136,7 @@
 }
 
 .signup-section h2 {
-    color: var(--white-color);
+    color: var(--background-color);
     margin-bottom: 2vh;
     font-size: 25px;
 }
@@ -151,7 +149,7 @@
     background-color: transparent;
     border: 0.75px solid #859D7D;
     border-radius: 5px 0 0 5px;
-    color: var(--white-color);
+    color: var(--background-color);
     height: 5vh;
     width: 400px;
     padding-left: 12px;
@@ -171,7 +169,7 @@
 }
 
 .signup-section button{
-    background-color: var(--white-color);
+    background-color: var(--background-color);
     display: flex;
     align-items: center;
     gap: 3px;
